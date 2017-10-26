@@ -1,11 +1,14 @@
 #include <vector>
 #include <iostream>
+#include <math.h>
+#include "system.h"
 
-int mod(int,int);
+/*
+template <typename T> T mod(T,T);
 
 class lattice{
 	private:
-		const unsigned int N;
+		const int N;
 		std::vector<std::vector<double> > lattice_points = std::vector<std::vector<double> >(N,std::vector<double>(N));
 	public:
 		lattice(unsigned int s) : N(s) {}
@@ -13,26 +16,22 @@ class lattice{
 		void set(int,int,double);
 };
 
+*/
 
 double lattice::point(int x, int y) {
 	return this->lattice_points[ mod(x, N)][ mod(y, N)];
 };
 
 void lattice::set(int x, int y, double ang) {
-	this->lattice_points.at(mod(x, N)).at(mod(y, N)) = ang;
+	this->lattice_points.at(mod(x, N)).at(mod(y, N)) = mod(ang,2*M_PI);
 };
 
-int mod(int a, int b) {
-	int ret = a % b;
+template <typename T> T lattice::mod(T a, T b) {
+	T ret = fmod(a, b);
 	if(ret <0){
 		ret+=b;
 	};
 	return ret;
 };
 
-
-
-int main() {
-	lattice sys(10);
-	v
-};
+int main() {}
