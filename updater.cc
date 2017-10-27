@@ -23,7 +23,7 @@ class parameters {
 
 double sin_points(lattice&, int, int, int, int);
 double cos_points(lattice&, int, int, int, int);
-lattice update_lattice(lattice& lat, parameters& par, double dt, double cL) {	
+lattice update_lattice(lattice& lat, parameters& par, double dt) {	
 	std::random_device rd;
 	std::mt19937 gen(rd());
 	std::uniform_real_distribution<> dis(-0.5,0.5);
@@ -38,7 +38,7 @@ lattice update_lattice(lattice& lat, parameters& par, double dt, double cL) {
 						 -par.Dy*( sin_points(lat, i, j, i, j+1) + sin_points(lat, i, j, i, j-1) )
 						 -par.Lx/2*( cos_points(lat, i, j, i+1, j) + cos_points(lat, i, j, i-1, j) -2)
 						 -par.Ly/2*( cos_points(lat, i, j, i, j+1) + cos_points(lat, i, j, i, j-1) -2))
-						 +sqrtdt*2*M_PI*cL*dis(gen);
+						 +sqrtdt*2*M_PI*par.Cl*dis(gen);
 			new_lat.set(i,j,val);	
 		}
 	}

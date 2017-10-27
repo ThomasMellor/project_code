@@ -3,17 +3,18 @@
 #include "system.h"
 
 
-class parameters {																																															friend lattice update_lattice(lattice&, parameters&, double, double);                                                   
+class parameters {																																															friend lattice update_lattice(lattice&, parameters&, double);                                                   
 	private:				        
 		const double Dx;                                                                                            
 		const double Dy;                                                                                            
 		const double Lx;                                                                                            
 		const double Ly;                                                                                            
+		const double Cl;
 	public:										                                                                                                              
-		parameters(double dx, double dy, double lx, double ly) : Dx(dx), Dy(dy), Lx(lx), Ly(ly) {}           
+		parameters(double dx, double dy, double lx, double ly, double cl) : Dx(dx), Dy(dy), Lx(lx), Ly(ly), Cl(cl) {}           
 };                                                                                                             
                                                                                                               
-lattice update_lattice(lattice&, parameters&, double, double);
+lattice update_lattice(lattice&, parameters&, double);
 
 double sin_points(lattice&, int, int, int, int);
 double cos_points(lattice&, int, int, int, int);

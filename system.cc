@@ -18,20 +18,17 @@ class lattice{
 
 */
 
-int lattice::size() {
+int lattice::size() const {
 	return N;
 }
 
 double lattice::point(int x, int y) {
-	return this->lattice_points[ mod(x, N)][ mod(y, N)];
+	double val = this->lattice_points[mod(x, N)][mod(y, N)];
+	return val;
 };
 
 void lattice::set(int x, int y, double ang) {
-	this->lattice_points.at(mod(x, N)).at(mod(y, N)) = mod(ang, 2*M_PI);
-};
-
-void lattice::normalise(int x, int y) {
-	this -> lattice_points.at(mod(x, N)).at(mod(y, N)) = mod(point(x, y), 2*M_PI);
+	this->lattice_points[mod(x, N)][mod(y, N)] = mod(ang, 2*M_PI);
 };
 
 template <typename T> T lattice::mod(T a, T b) {
@@ -42,3 +39,11 @@ template <typename T> T lattice::mod(T a, T b) {
 	return ret;
 };
 
+lattice::lattice(const lattice& lat) : N(lat.size()) {
+	this-> lattice_points = lat.lattice_points;
+};
+
+lattice& lattice::operator=(const lattice& lat) {
+	this -> lattice_points = lat.lattice_points;
+	return *this;
+};
