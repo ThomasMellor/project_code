@@ -14,10 +14,13 @@ class lattice{
 		template <typename T> T mod(T,T);    
 	public:    
 		lattice(unsigned int s) : N(s) {}    
-		double point(int,int);    
-		void set(int,int,double);    
+		double point(int, int);    
+		void set(int, int, double);    
+		void normalise(int, int);
+		int size();
 };    
-    
+
+
 
 #endif    
     
