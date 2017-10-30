@@ -7,12 +7,12 @@
 
 void update_progress_bar(int, sim_parameters&, int&);
 
-void simulate(lattice& lat, parameters& par, sim_parameters& sim_par, std::string dir, int sim_number) {
+void simulate(angle_lattice& lat, parameters& par, sim_parameters& sim_par, std::string dir, int sim_number) {
 	int counter = sim_par.num_per_save;
 	int files_saved = 0;
 	int progress_counter = 1;
 
-	lattice new_lat(lat.size());
+	angle_lattice new_lat(lat.size());
 	for(int iteration_num = 0; iteration_num < sim_par.num_iter; iteration_num++) {
 		update_progress_bar(iteration_num, sim_par, progress_counter);
 
@@ -36,7 +36,7 @@ void simulate(lattice& lat, parameters& par, sim_parameters& sim_par, std::strin
 	};	
 };
 
-void multiple_simulate(lattice& lat, parameters& par, sim_parameters& sim_par, std::string dir) {
+void multiple_simulate(angle_lattice& lat, parameters& par, sim_parameters& sim_par, std::string dir) {
 	for(int i = 0; i < sim_par.num_sim; i++) {
 		std::cout << "Simulation " << i+1 << ":" << std::endl;
 		simulate(lat, par, sim_par, dir, i+1);
@@ -58,7 +58,7 @@ void update_progress_bar(int iteration_num, sim_parameters& sim_par, int& progre
 };
 
 int main() {
-	lattice lat(64);
+	angle_lattice lat(64);
 	for(int i = 0; i < 2; i++) {
 		for(int j = 0; j < 2; j++) {
 			lat.set(i, j, i+j);

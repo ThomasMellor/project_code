@@ -6,8 +6,8 @@
 #include <string>
 
 class sim_parameters {
-	friend void simulate(lattice&, parameters&, sim_parameters&, std::string, int);
-	friend void multiple_simulate(lattice&, parameters&, sim_parameters&, std::string);
+	friend void simulate(angle_lattice&, parameters&, sim_parameters&, std::string, int);
+	friend void multiple_simulate(angle_lattice&, parameters&, sim_parameters&, std::string);
 	friend void update_progress_bar(int, sim_parameters&, int&);
 	private:
 		double dt;
@@ -19,10 +19,8 @@ class sim_parameters {
 		num_per_save(save) {}	
 };
 
-void simulate(lattice&, parameters&, sim_parameters&, std::string, int);
-
-void multiple_simulate(lattice&, parameters&, sim_parameters&, std::string);
-
+void simulate(angle_lattice&, parameters&, sim_parameters&, std::string, int);
+void multiple_simulate(angle_lattice&, parameters&, sim_parameters&, std::string);
 void update_progress_bar(int, sim_parameters&, int&);                 
 
 

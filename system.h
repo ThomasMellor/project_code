@@ -8,25 +8,69 @@
     
 template<typename T> class lattice{    
 	private:    
-		const unsigned int N;    
+		const int N;    
 		std::vector<std::vector<T>> lattice_points = 
 			std::vector<std::vector<T>>(N,std::vector<T>(N));
-		template <typename R> R mod(R,R);    
+	protected:
+		template <typename R> T mod(R, R);    
 	public:    
-		int getN() { return N; };
-		lattice(unsigned int s) : N(s) {}    	
+		lattice(int);    	
 		lattice(const lattice&);
 		lattice& operator=(const lattice&);
 		~lattice() {};
 
 		T point(int, int);    
-		virtual void set(int, int, T);    
-		size_t size() const;
+		void set(int, int, T);    
+		int size() const;
 };    
+
+template <typename T>    
+int lattice<T>::size() const {    
+	    return N;    
+}    
+    
+template <typename T>    
+T lattice<T>::point(int x, int y) {    
+	    return this->lattice_points[mod(x, N)][mod(y, N)];    
+};    
+    
+template <typename T>    
+void lattice<T>::set(int x, int y, T val) {    
+	    this->lattice_points[mod(x, N)][mod(y, N)] = val;    
+};    
+    
+template <typename T> template <typename R>    
+T lattice<T>::mod(R a, R b) {    
+	T ret = fmod(a, b);    
+	if(ret < 0){    
+		ret += b;    
+	};    
+	return ret;    
+};    
+    
+template<typename T>        
+lattice<T>::lattice(int s) : N(s) {};    
+    
+template<typename T>    
+lattice<T>::lattice(const lattice& lat) : N(lat.size()) {    
+	    this-> lattice_points = lat.lattice_points;    
+};    
+    
+template <typename T>    
+lattice<T>& lattice<T>::operator=(const lattice& lat) {    
+	if( this -> size() != lat.size()) {    
+		throw std::invalid_argument("latices not the same size");    
+	};    
+this -> lattice_points = lat.lattice_points;    
+return *this;    
+};    
+    
+
 
 class angle_lattice : public lattice<double> {
 	public:
 		virtual void set(int, int, double);
+		angle_lattice(int N);
 };
 #endif
 

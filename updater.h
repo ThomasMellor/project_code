@@ -3,7 +3,7 @@
 #include "system.h"
 
 
-class parameters {																																															friend lattice update_lattice(lattice&, parameters&, double);                                                   
+class parameters {																																															friend angle_lattice update_lattice(angle_lattice&, parameters&, double);                                                   
 	private:				        
 		const double Dx;                                                                                            
 		const double Dy;                                                                                            
@@ -14,9 +14,9 @@ class parameters {																																															friend lattice 
 		parameters(double dx, double dy, double lx, double ly, double cl) : Dx(dx), Dy(dy), Lx(lx), Ly(ly), Cl(cl) {}           
 };                                                                                                             
                                                                                                               
-lattice update_lattice(lattice&, parameters&, double);
+angle_lattice update_lattice(angle_lattice&, parameters&, double);
 
-double sin_points(lattice&, int, int, int, int);
-double cos_points(lattice&, int, int, int, int);
+double sin_points(angle_lattice&, int, int, int, int);
+double cos_points(angle_lattice&, int, int, int, int);
 
 #endif	
