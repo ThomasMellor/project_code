@@ -4,6 +4,7 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include "lattice_io.h"
 
 void update_progress_bar(int, sim_parameters&, int&);
 
@@ -22,13 +23,7 @@ void simulate(angle_lattice& lat, parameters& par, sim_parameters& sim_par, std:
 			counter = 0;
 			std::string path = dir + "/" + dir +  std::to_string(sim_number) + "," 
 				+ std::to_string(iteration_num + 1) + ".txt";
-			std::ofstream file(path);
-			for(int j = 0; j < lat.size(); j++) {
-				for(int k = 0; k < lat.size(); k++) {
-					file << lat.point(j, k) << " "; 
-				};	
-				file << std::endl;
-			};
+			lattice_write(lat, path);
 		};
 		iteration_num++;
 		counter++;
@@ -58,14 +53,14 @@ void update_progress_bar(int iteration_num, sim_parameters& sim_par, int& progre
 };
 
 int main() {
-	angle_lattice lat(64);
+	angle_lattice lat(3);
 	for(int i = 0; i < 2; i++) {
 		for(int j = 0; j < 2; j++) {
 			lat.set(i, j, i+j);
 		};
 	};
 	parameters param(1,1,1,1,0);
-	sim_parameters sim_param(1,400,20,10);
+	sim_parameters sim_param(1,10,20,5);
 	multiple_simulate(lat, param, sim_param, "testdir");
 };
 	
