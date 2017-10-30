@@ -6,26 +6,27 @@
 #include <math.h>    
     
     
-class lattice{    
+template<typename T> class lattice{    
 	private:    
-		const int N;    
-		std::vector<std::vector<double> > lattice_points = 
-			std::vector<std::vector<double> >(N,std::vector<double>(N));
-		template <typename T> T mod(T,T);    
+		const unsigned int N;    
+		std::vector<std::vector<T>> lattice_points = 
+			std::vector<std::vector<T>>(N,std::vector<T>(N));
+		template <typename R> R mod(R,R);    
 	public:    
+		int getN() { return N; };
 		lattice(unsigned int s) : N(s) {}    	
 		lattice(const lattice&);
 		lattice& operator=(const lattice&);
 		~lattice() {};
 
-		double point(int, int);    
-		void set(int, int, double);    
-		int size() const;
+		T point(int, int);    
+		virtual void set(int, int, T);    
+		size_t size() const;
 };    
 
-
-
-#endif    
-    
-    
+class angle_lattice : public lattice<double> {
+	public:
+		virtual void set(int, int, double);
+};
+#endif
 

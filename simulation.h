@@ -7,6 +7,8 @@
 
 class sim_parameters {
 	friend void simulate(lattice&, parameters&, sim_parameters&, std::string, int);
+	friend void multiple_simulate(lattice&, parameters&, sim_parameters&, std::string);
+	friend void update_progress_bar(int, sim_parameters&, int&);
 	private:
 		double dt;
 		int num_iter;
@@ -18,5 +20,10 @@ class sim_parameters {
 };
 
 void simulate(lattice&, parameters&, sim_parameters&, std::string, int);
+
+void multiple_simulate(lattice&, parameters&, sim_parameters&, std::string);
+
+void update_progress_bar(int, sim_parameters&, int&);                 
+
 
 #endif

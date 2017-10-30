@@ -2,6 +2,7 @@
 #include <iostream>
 #include <math.h>
 #include "system.h"
+#include <stdexcept>
 
 /*
 template <typename T> T mod(T,T);
@@ -18,20 +19,24 @@ class lattice{
 
 */
 
-int lattice::size() const {
+template <typename T> 
+size_t lattice<T>::size() const {
 	return N;
 }
 
-double lattice::point(int x, int y) {
-	double val = this->lattice_points[mod(x, N)][mod(y, N)];
+template <typename T>
+T lattice<T>::point(int x, int y) {
+	double val = this->lattice_points[mod(x, (int) N)][mod(y, (int) N)];
 	return val;
 };
 
-void lattice::set(int x, int y, double ang) {
-	this->lattice_points[mod(x, N)][mod(y, N)] = mod(ang, 2*M_PI);
+template <typename T> 
+void lattice<T>::set(int x, int y, T val) {
+	this->lattice_points[mod(x, (int) N)][mod(y, (int) N)] = val;
 };
 
-template <typename T> T lattice::mod(T a, T b) {
+template <typename T>  template <typename R> 
+R lattice<T>::mod(R a, R b) {
 	T ret = fmod(a, b);
 	if(ret <0){
 		ret+=b;
@@ -39,11 +44,22 @@ template <typename T> T lattice::mod(T a, T b) {
 	return ret;
 };
 
-lattice::lattice(const lattice& lat) : N(lat.size()) {
+template<typename T>
+lattice<T>::lattice(const lattice& lat) : N(lat.size()) {
 	this-> lattice_points = lat.lattice_points;
 };
 
-lattice& lattice::operator=(const lattice& lat) {
+template <typename T>
+lattice<T>& lattice<T>::operator=(const lattice& lat) {
+	if( this-> size() != lat.size()) {
+		throw std::invalid_argument("latices not the same size");	
+	};
 	this -> lattice_points = lat.lattice_points;
 	return *this;
+};
+
+void angle_lattice::set(int x, int y, double ang) {
+	int num = (*this).getN();
+	lattice<double>::set(x, y, ang);
+//	( this -> point(mod(x, num), mod(y, num) ) = mod(point(mod(x, num), mod(y, num)), 2*M_PI);
 };
