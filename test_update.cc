@@ -22,7 +22,7 @@ int main() {
 	angle_lattice lat_new(2);	
 	lat_new = lat;
 		
-		
+/*		
 	parameters param(1,1,1,1,0);
 	angle_lattice new_lat = update_lattice(lat, param, 1);
 	for(int i=0; i<2; i++) {
@@ -31,4 +31,5 @@ int main() {
 		};
 		std::cout << std::endl;
 	};
+*/
 };

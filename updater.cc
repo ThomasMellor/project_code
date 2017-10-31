@@ -3,26 +3,9 @@
 #include <math.h>
 #include <random>
 
-/*
-class parameters {
-	private: 
-		friend lattice update_lattice(lattice, parameters);	
-		double Dx;
-		double Dy;
-		double Lx;
-		double Ly;
-
-		double getDx { return Dx };
-		double getDy { return Dy };
-		double getLx { return Lx };
-		double getLy { return Ly };
-	public:
-		parameters(double dx, double dy, double lx, double ly) : Dx(dx), Dy(dy), Lx(lx), Ly(ly) {};
-}
-*/
-
 double sin_points(angle_lattice&, int, int, int, int);
 double cos_points(angle_lattice&, int, int, int, int);
+
 angle_lattice update_lattice(angle_lattice& lat, parameters& par, double dt) {	
 	std::random_device rd;
 	std::mt19937 gen(rd());

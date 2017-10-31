@@ -10,8 +10,7 @@ template <typename T> T mod(T,T);
 class lattice{
 	private:
 		const int N;
-		std::vector<std::vector<double> > lattice_points = std::vector<std::vector<double> >(N,std::vector<double>(N));
-	public:
+		std::vector<std::vector<double> > lattice_points = std::vector<std::vector<double> >(N,std::vector<double>(N));public:
 		lattice(unsigned int s) : N(s) {}
 		double point(int,int);
 		void set(int,int,double);

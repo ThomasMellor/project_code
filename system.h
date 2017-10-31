@@ -8,39 +8,40 @@
     
 template<typename T> class lattice{    
 	private:    
-		const int N;    
+		const unsigned int N;    
 		std::vector<std::vector<T>> lattice_points = 
 			std::vector<std::vector<T>>(N,std::vector<T>(N));
 	protected:
-		template <typename R> T mod(R, R);    
+		template <typename R, typename S>  static T mod(R, S) ;    
 	public:    
-		lattice(int);    	
+		lattice(unsigned int);    	
 		lattice(const lattice&);
 		lattice& operator=(const lattice&);
 		~lattice() {};
 
-		T point(int, int);    
+		T point(int, int) const;    
 		void set(int, int, T);    
-		int size() const;
+		unsigned int size() const;
 };    
 
 template <typename T>    
-int lattice<T>::size() const {    
-	    return N;    
+unsigned int lattice<T>::size() const {    
+	return N;    
 }    
     
 template <typename T>    
-T lattice<T>::point(int x, int y) {    
-	    return this->lattice_points[mod(x, N)][mod(y, N)];    
+T lattice<T>::point(int x, int y) const {    
+	T val = (*this).lattice_points[mod(x, N)][mod(y, N)];    
+	return val; 
 };    
     
 template <typename T>    
 void lattice<T>::set(int x, int y, T val) {    
-	    this->lattice_points[mod(x, N)][mod(y, N)] = val;    
+	this->lattice_points[mod(x, N)][mod(y, N)] = val;    
 };    
     
-template <typename T> template <typename R>    
-T lattice<T>::mod(R a, R b) {    
+template <typename T> template <typename R, typename S>    
+T lattice<T>::mod(R a, S b) {    
 	T ret = fmod(a, b);    
 	if(ret < 0){    
 		ret += b;    
@@ -49,7 +50,7 @@ T lattice<T>::mod(R a, R b) {
 };    
     
 template<typename T>        
-lattice<T>::lattice(int s) : N(s) {};    
+lattice<T>::lattice(unsigned int s) : N(s) {};    
     
 template<typename T>    
 lattice<T>::lattice(const lattice& lat) : N(lat.size()) {    
@@ -64,8 +65,6 @@ lattice<T>& lattice<T>::operator=(const lattice& lat) {
 this -> lattice_points = lat.lattice_points;    
 return *this;    
 };    
-    
-
 
 class angle_lattice : public lattice<double> {
 	public:

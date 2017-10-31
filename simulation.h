@@ -6,21 +6,22 @@
 #include <string>
 
 class sim_parameters {
-	friend void simulate(angle_lattice&, parameters&, sim_parameters&, std::string, int);
-	friend void multiple_simulate(angle_lattice&, parameters&, sim_parameters&, std::string);
+	friend void simulate(int, parameters&, sim_parameters&, std::string, int);
+	friend void multiple_simulate(int, parameters&, sim_parameters&, std::string);
 	friend void update_progress_bar(int, sim_parameters&, int&);
 	private:
-		double dt;
-		int num_iter;
-		int num_sim;
-		int num_per_save;
+		const double dt;
+		const unsigned int num_iter;
+		const unsigned int num_sim;
+		const unsigned int num_per_save;
+		const std::string init_cond;
 	public: 
-		sim_parameters(int timestep, int iter, int sim, int save) : dt(timestep), num_iter(iter), num_sim(sim),
-		num_per_save(save) {}	
+		sim_parameters(int timestep, int iter, int sim, int save, std::string initial) :
+		   	dt(timestep), num_iter(iter), num_sim(sim), num_per_save(save), init_cond(initial) {}	
 };
 
-void simulate(angle_lattice&, parameters&, sim_parameters&, std::string, int);
-void multiple_simulate(angle_lattice&, parameters&, sim_parameters&, std::string);
+void simulate(int, parameters&, sim_parameters&, std::string, int);
+void multiple_simulate(int, parameters&, sim_parameters&, std::string);
 void update_progress_bar(int, sim_parameters&, int&);                 
 
 
