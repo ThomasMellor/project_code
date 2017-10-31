@@ -54,14 +54,14 @@ int main() {
 	std::string cond_input;
 	std::string init_cond = {"ordered"};
 
-	std::cout << "Disordered initial condition? ";
-	std::cin >> cond_input;
+	value_save("Disordered initial condition? ", cond_input);
 	if(cond_input == "y") {
 		init_cond = "disordered";
 	};
-	std::cout << "Please enter the directory you will be saving the files in: ";
-	std::string dir;
-	std::getline(std::cin, dir);
+	std::string directory;
+	std::cout << "Please enter the directory you will be saving the files in" << std::endl;
+	
+	std::getline(std::cin, directory);
 	
 	parameters param(Dx, Dy, Lx, Ly, cL);
 	sim_parameters sim_param(dt, num_iter, num_sim, num_save, init_cond);
@@ -72,7 +72,7 @@ int main() {
 		<< num_iter << ", the number of simulations is " << num_sim 
 		<< ", and the number of iterations per save is " << num_save << std::endl; 	
 	std::cout << "The initial condition is " << init_cond << " and the directory the files will be save in is "
-	<< dir << std::endl; 	
+	<< directory << std::endl; 	
 
-	multiple_simulate(lat_size, param, sim_param, dir);  
+	multiple_simulate(lat_size, param, sim_param, directory);  
 };

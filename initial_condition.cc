@@ -1,6 +1,7 @@
 #include "initial_condition.h"
 #include <math.h>
 #include <random> 
+#include <iostream>
 
 angle_lattice disordered(int N) {
 	std::random_device rd;                                                                                    
@@ -10,7 +11,10 @@ angle_lattice disordered(int N) {
 	angle_lattice lat(N);
 	for(int i = 0; i < lat.size(); i++) {
 		for(int j = 0; j < lat.size(); j++) {
-			lat.set(i, j, dis(gen));
+			double val = dis(gen);
+			std::cout << "val is " << val << std::endl;
+			lat.set(i, j, val);
+			std::cout << lat.point(i, j);
 		};
 	};
 	return lat;

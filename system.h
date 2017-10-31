@@ -64,7 +64,17 @@ lattice<T>& lattice<T>::operator=(const lattice& lat) {
 	};    
 this -> lattice_points = lat.lattice_points;    
 return *this;    
-};    
+};
+
+template <typename T> 
+void print(lattice<T> const &lat) {
+	for(int i = 0; i < lat.size(); i++) {
+		for(int j = 0; j < lat.size(); j++) {
+			std::cout << lat.point(i, j) << " ";
+		};
+		std::cout << std::endl;
+	};	
+};
 
 class angle_lattice : public lattice<double> {
 	public:
