@@ -10,43 +10,27 @@
 void update_progress_bar(int, sim_parameters&, int&);
 
 void simulate(int lattice_size, parameters& par, sim_parameters& sim_par, std::string dir, int sim_number) {
-	int counter = sim_par.num_per_save;
-	int files_saved = 0;
+	int counter = 1;
 	int progress_counter = 1;
 	angle_lattice lat(lattice_size);
 	std::cout << sim_par.init_cond;
 	if(sim_par.init_cond == "disordered") {
-		std::cout << "test" << std::endl;
 		lat = disordered(lattice_size);
 	};
 	angle_lattice new_lat(lattice_size);
-	std::cout << "initial lat is" << std::endl;
-	print(lat);
+	std::string path = dir + "/" + dir + std::to_string(sim_number) + "," 
+		+ std::to_string(0) + ".txt";
+	lattice_write(lat, path);	
 
 	for(int iteration_num = 0; iteration_num < sim_par.num_iter; iteration_num++) {
-//		update_progress_bar(iteration_num, sim_par, progress_counter);
+		update_progress_bar(iteration_num, sim_par, progress_counter);
 		new_lat = update_lattice(lat, par, sim_par.dt);
-//		std::cout << lat.point(0,0);
-		std::cout << "lat is " << std::endl;
-		print(lat);		
-		std::cout << std::endl;
 
-		std::cout << "new_lat is " << std::endl;
-		print(new_lat);
-		std::cout << std::endl;
 		if(counter == sim_par.num_per_save) {
-			files_saved++;
 			counter = 0;
 			std::string path = dir + "/" + dir +  std::to_string(sim_number) + "," 
 				+ std::to_string(iteration_num + 1) + ".txt";
-//			lattice_write(lat, path);  
-			std::ofstream file(path);
-			for(int j = 0; j < new_lat.size(); j++) {                                                                     
-				        for(int k = 0; k < new_lat.size(); k++) {                                                                 
-									file << new_lat.point(j, k) << " ";                                                                   
-										        };                                                                                                    
-						        file << std::endl;                                                                                    
-								    };     
+			lattice_write(new_lat, path);  
 		};
 		counter++;
 		lat = new_lat;		
@@ -73,3 +57,4 @@ void update_progress_bar(int iteration_num, sim_parameters& sim_par, int& progre
 		std::cout << "]" << std::flush;                                                                           
 	};                                                                                                        
 };
+

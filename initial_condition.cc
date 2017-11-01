@@ -12,9 +12,7 @@ angle_lattice disordered(int N) {
 	for(int i = 0; i < lat.size(); i++) {
 		for(int j = 0; j < lat.size(); j++) {
 			double val = dis(gen);
-			std::cout << "val is " << val << std::endl;
 			lat.set(i, j, val);
-			std::cout << lat.point(i, j);
 		};
 	};
 	return lat;
