@@ -81,5 +81,12 @@ class angle_lattice : public lattice<double> {
 		virtual void set(int, int, double);
 		angle_lattice(int N);
 };
+
+class vortex_lattice : public lattice<int> {
+	public:
+		virtual void set(int, int, int);
+		vortex_lattice(int N);
+};
+
 #endif
 
