@@ -4,6 +4,17 @@
 #include <iostream>
 #include <sstream>
 #include <iterator>
+#include <experimental/filesystem>                                                                            
+
+                                                                                                              
+int main() {                                                                                                  
+	    std::string path = "./testdir";                                                                           
+		    for( auto &p : fs::directory_iterator(path)) {                                                            
+				        std::cout << p << std::endl;                                                                          
+						    };                                                                                                        
+}; 
+
+
 
 unsigned int countWordsInString(std::string const&);
 
@@ -57,5 +68,7 @@ unsigned int countWordsInString(std::string const& str) {
 	};
 	return counter;
 };
+
+
 
 #endif

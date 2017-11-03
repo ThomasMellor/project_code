@@ -83,9 +83,20 @@ class angle_lattice : public lattice<double> {
 };
 
 class vortex_lattice : public lattice<int> {
+	private:
+		int n_vor = 0;
+		int n_anti_vor = 0;
 	public:
 		virtual void set(int, int, int);
 		vortex_lattice(int N);
+		int num_vor() const {return n_vor;};
+		int num_anti_vor() const {return n_anti_vor;}
+};
+
+template <typename T> int sign(T val) {
+	if(val > 0) {return 1;};                                                                                  
+	if(val < 0) {return -1;};                                                                                 
+	return 0;    
 };
 
 #endif
