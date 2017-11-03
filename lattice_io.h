@@ -1,22 +1,20 @@
-#ifndef LATTICE_IO
-#define LATTICE_IO
+#ifndef LATTICE_IO_H
+#define LATTICE_IO_D
 #include <fstream> 
 #include <iostream>
-#include <sstream>
 #include <iterator>
-#include <experimental/filesystem>                                                                            
+#include <string>
+#include <vector>
+#include "system.h"
+#include <experimental/filesystem>
 
-                                                                                                              
-int main() {                                                                                                  
-	    std::string path = "./testdir";                                                                           
-		    for( auto &p : fs::directory_iterator(path)) {                                                            
-				        std::cout << p << std::endl;                                                                          
-						    };                                                                                                        
-}; 
+namespace fs = std::experimental::filesystem::v1;
+	   
+unsigned int num_words_in_string(std::string);
 
-
-
-unsigned int countWordsInString(std::string const&);
+std::vector<std::string> list_files(std::string);
+ 
+double timestep(std::string file);
 
 template <typename T> void lattice_write(lattice<T> const& lat, std::string const& path) {	
 	std::ofstream file(path);                                                                         
@@ -37,7 +35,7 @@ template <typename T> void lattice_read(lattice<T>& lat, std::string const& path
 	std::string line;
 	int line_num = 0;
 	getline(file, line);
-	if(countWordsInString(line) != lat.size()) {
+	if(num_words_in_string(line) != lat.size()) {
 		std::cerr << "Cannot read data onto lattice as incorrect size. " << std::endl;		
 		exit(1);
 	};
@@ -58,17 +56,5 @@ template <typename T> void write_line(lattice<T> & lat, std::string const& line,
 		pos_in_line++;
 	};	
 };
-
-unsigned int countWordsInString(std::string const& str) {
-	std::stringstream stream(str);
-	std::string word;
-	int counter = 0;
-	while(stream >> word) {
-		counter++;
-	};
-	return counter;
-};
-
-
 
 #endif

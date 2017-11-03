@@ -1,11 +1,11 @@
 #include <string>
 #include <iostream>
-#include <experimental/filesystem>
-namespace fs = std::experimental::filesystem::v1;
+#include "lattice_io.h"
+
 
 int main() {
-	std::string path = "./testdir";
-	for( auto &p : fs::directory_iterator(path)) {
-		std::cout << p << std::endl;
-	};
-};
+        std::vector<std::string> files = list_files("./testdir");
+        for(std::string& file : files) {
+                std::cout << timestep(file) << std::endl;
+        };
+};       

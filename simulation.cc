@@ -18,8 +18,8 @@ void simulate(int lattice_size, parameters& par, sim_parameters& sim_par, std::s
 		lat = disordered(lattice_size);
 	};
 	angle_lattice new_lat(lattice_size);
-	std::string path = dir + "/simulation:dt=" + std::to_string(sim_par.dt) 
-		+ "sim_num=" + std::to_string(sim_number) + "iter_num=" 
+	std::string path = dir + "/simulation:dt," + std::to_string(sim_par.dt) 
+		+ ",sim_num," + std::to_string(sim_number) + ",iter_num," 
 		+  std::to_string(0) + ".txt";
 	lattice_write(lat, path);	
 
@@ -29,8 +29,8 @@ void simulate(int lattice_size, parameters& par, sim_parameters& sim_par, std::s
 
 		if(counter == sim_par.num_per_save) {
 			counter = 0;
-			std::string path = dir + "/simulation:dt=" + std::to_string(sim_par.dt) +
-				+ "sim_num=" + std::to_string(sim_number) + "iter_num=" 
+			std::string path = dir + "/simulation:dt,"+ std::to_string(sim_par.dt) +
+				+ "sim_num," + std::to_string(sim_number) + "iter_num," 
 			    + std::to_string(iteration_num + 1) + ".txt";
 			lattice_write(new_lat, path);  
 		};
