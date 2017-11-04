@@ -62,8 +62,8 @@ lattice<T>& lattice<T>::operator=(const lattice& lat) {
 	if( this -> size() != lat.size()) {    
 		throw std::invalid_argument("latices not the same size");    
 	};    
-this -> lattice_points = lat.lattice_points;    
-return *this;    
+        this -> lattice_points = lat.lattice_points;    
+        return *this;    
 };
 
 template <typename T> 
@@ -91,6 +91,7 @@ class vortex_lattice : public lattice<int> {
 		vortex_lattice(int N);
 		int num_vor() const {return n_vor;};
 		int num_anti_vor() const {return n_anti_vor;}
+                vortex_lattice& set_vortex_lattice(angle_lattice const& lat);
 };
 
 template <typename T> int sign(T val) {

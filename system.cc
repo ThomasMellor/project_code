@@ -3,7 +3,7 @@
 #include <math.h>
 #include "system.h"
 #include <stdexcept>
-
+#include "vortex_calculation.h"
 
 void angle_lattice::set(int x, int y, double ang) {
 	lattice<double>::set(x, y, mod(ang,2*M_PI));
@@ -38,3 +38,17 @@ void vortex_lattice::set(int x, int y, int charge) {
 };
 
 vortex_lattice::vortex_lattice(int N) : lattice<int>(N) {};
+
+vortex_lattice& vortex_lattice::set_vortex_lattice(angle_lattice const& lat) {
+        if((*this).size() != lat.size()){
+                std::cerr << "Vortex lattice and angle lattice not the same size. Error. " << std::endl;
+                exit(1);      
+        };
+        for(int i = 0; i < lat.size(); i++) {
+                for(int j = 0; j < lat.size(); j++) {
+                        (*this).set(i, j, circulation(lat, i, j));                                                                              
+                };
+        };
+        return *this;
+};
+

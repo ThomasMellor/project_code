@@ -3,7 +3,6 @@
 #include "system.h"
 #include <vector>
 
-
 std::vector<double> angle_components(double const&);
 
 std::vector<double> calculate_components(angle_lattice const&);
