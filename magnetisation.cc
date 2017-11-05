@@ -1,6 +1,7 @@
 #include "magnetisation.h"
 #include <iostream> 
 #include <math.h>
+#include <unordered_map>
 
 av_magnetisation& av_magnetisation::add(magnetisation const& mag) {
         int num = (*this).averaging_num;
@@ -47,4 +48,15 @@ double binder_cumulant(av_magnetisation const& av_mag_2, av_magnetisation const&
         return 2 - av_mag_2.get_average()/av_mag_4.get_average();
 };
 
-
+std::unordered_map<double, double> make_binder_cumulant_map(std::unordered_map<double, av_magnetisation> mag2_map, std::unordered_map<double, av_magnetisation> mag4_map) {
+        if(mag2_map.at(0).get_power() != 2 || mag4_map.at(0).get_power() !=4 ) {
+                std::cerr << "Cannot make binder cumulant map as incorrect powers of average magnetisation" << std::endl;
+                exit(1); 
+        };        
+        std::unordered_map<double, double> binder_map; 
+        for(std::unordered_map<double, av_magnetisation>::iterator iter = mag2_map.begin(); iter != mag2_map.end(); iter++) {
+                double time = iter -> first;
+                binder_map[time] = 2 - mag2_map[time].get_average()/mag4_map[time].get_average();
+        };
+        return binder_map; 
+};

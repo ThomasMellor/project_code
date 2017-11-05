@@ -3,23 +3,25 @@
 #include <sstream>
 #include <string>
 
+template <typename T> bool value_check(std::string line, T&val) {
+        std::istringstream is {line};
+        if((is >> val) && !(is >> line)){
+                return true;
+        } else {
+                return false;
+        };
+};
+
 template <typename T> void value_save(std::string name, T& val) {                                                                  
 	std::cout << name << ": ";	
 	
 	std::string line;
 	while(std::getline(std::cin, line)){
 		std::istringstream is {line};
-		if((is >> val) && !(is >> line)){
+		if(value_check(line, val)){
 			break;
 		};
 		std::cerr << "Invalid input. Please try again: ";
-	};
-};
-
-template <typename T> void check_sign(T& val) {
-	while(val <= 0) {
-		std::cout << "Invalid input. Please try again";
-		value_save("", val);
 	};
 };
 

@@ -8,6 +8,9 @@
 #include "system.h"
 #include <experimental/filesystem>
 #include <sys/stat.h>
+#include <unordered_map> 
+#include "vortex_calculation.h"
+#include "magnetisation.h"
 
 namespace fs = std::experimental::filesystem::v1;
 	   
@@ -52,6 +55,15 @@ template <typename T> void lattice_read(lattice<T>& lat, std::string const& path
 		write_line(lat, line, line_num);
 	};	
 };
+
+angle_lattice angle_lattice_from_path(std::string const& path);
+
+angle_lattice empty_angle_lattice_from_path(std::string const& path);
+
+std::unordered_map<double, av_vortex_number> make_vortex_map(std::vector<std::string> const &);
+
+std::unordered_map<double, av_magnetisation> make_magnetisation_map(std::vector<std::string> const&, int);
+
 
 template <typename T> void write_line(lattice<T> & lat, std::string const& line, int line_num) {
 	int pos_in_line = 0; 
