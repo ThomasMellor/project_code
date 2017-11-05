@@ -32,7 +32,6 @@ template <typename T> void value_save_config(std::ifstream& file, T& val) {
         };
 };
 
-
 template <typename T> void check_sign_config(T& val) {
         if(val <= 0) {
                 std::cerr << std::to_string(val) << " has the wrong sign. Please edit file" << std::endl;
@@ -40,7 +39,6 @@ template <typename T> void check_sign_config(T& val) {
         };
         return;
 };
-
 
 int main() {
         std::cout << "Welcome to the KPZ simulation. Please type in the configuration file name:" << std::endl;

@@ -16,7 +16,7 @@ class sim_parameters {
 		const unsigned int num_per_save;
 		const std::string init_cond;
 	public: 
-		sim_parameters(int timestep, int iter, int sim, int save, std::string initial) :
+		sim_parameters(double timestep, int iter, int sim, int save, std::string initial) :
 		   	dt(timestep), num_iter(iter), num_sim(sim), num_per_save(save), init_cond(initial) {}	
 };
 

@@ -58,8 +58,8 @@ av_vortex_number& av_vortex_number::add(vortex_number const& vor) {
         int num = (*this).averaging_num;
         double old_av_vor = (*this).av_vor;
         double old_av_anti_vor = (*this).av_anti_vor;
-        (*this).av_vor = old_av_vor*num + vor.get_num_vor();
-        (*this).av_anti_vor =old_av_anti_vor*num + vor.get_num_anti_vor();
+        (*this).av_vor = ((double) old_av_vor*num + vor.get_num_vor())/(num + 1);
+        (*this).av_anti_vor = ((double) old_av_anti_vor*num + vor.get_num_anti_vor())/(num + 1);
         (*this).averaging_num++;
         return *this;
 };

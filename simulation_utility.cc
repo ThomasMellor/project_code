@@ -7,3 +7,10 @@ void check_dir(std::string& dir) {
         };
 };
 
+bool check_files_exist(std::vector<std::string> files) {
+        if(files.size() == 0){
+                return false;
+        } else { 
+                return true;
+        };
+};

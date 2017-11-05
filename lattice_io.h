@@ -8,7 +8,7 @@
 #include "system.h"
 #include <experimental/filesystem>
 #include <sys/stat.h>
-#include <unordered_map> 
+#include <map> 
 #include "vortex_calculation.h"
 #include "magnetisation.h"
 
@@ -57,9 +57,9 @@ angle_lattice angle_lattice_from_path(std::string const& path);
 
 angle_lattice empty_angle_lattice_from_path(std::string const& path);
 
-std::unordered_map<double, av_vortex_number> make_vortex_map(std::vector<std::string> const &);
+std::map<double, av_vortex_number> make_vortex_map(std::vector<std::string> const &);
 
-std::unordered_map<double, av_magnetisation> make_magnetisation_map(std::vector<std::string> const&, int);
+std::map<double, av_magnetisation> make_magnetisation_map(std::vector<std::string> const&, int);
 
 template <typename T> void write_line(lattice<T> & lat, std::string const& line, int line_num) {
 	int pos_in_line = 0; 
@@ -70,5 +70,10 @@ template <typename T> void write_line(lattice<T> & lat, std::string const& line,
 		pos_in_line++;
 	};	
 };
+
+void write_binder_cumulant(std::map<double, double> const&, std::string const&, std::string const&);
+
+void write_vortex_number(std::map<double, av_vortex_number> const&, std::string const&, std::string const&);
+
 
 #endif

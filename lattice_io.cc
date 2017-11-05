@@ -3,6 +3,7 @@
 #include <sstream>
 #include <stdlib.h>
 #include <utility> 
+#include <iomanip>
 
 bool check_dir_exists(std::string path){ 
         struct stat sb;
@@ -12,8 +13,6 @@ bool check_dir_exists(std::string path){
                 return false;
         };       
 };
-
-
 
 unsigned int num_words_in_string(std::string path) {
         std::stringstream stream(path);
@@ -76,9 +75,9 @@ angle_lattice empty_angle_lattice_from_path(std::string const& path) {
         return lat;
 };
 
-std::unordered_map<double, av_vortex_number> make_vortex_map(std::vector<std::string> const& files) {
+std::map<double, av_vortex_number> make_vortex_map(std::vector<std::string> const& files) {
         angle_lattice lat = empty_angle_lattice_from_path(files[0]);        
-        std::unordered_map<double, av_vortex_number> vor_map; 
+        std::map<double, av_vortex_number> vor_map; 
         for(std::string const& st : files) {
                 double time = timestep(st);
                 lattice_read(lat, st);
@@ -88,14 +87,14 @@ std::unordered_map<double, av_vortex_number> make_vortex_map(std::vector<std::st
         return vor_map;
 };
 
-std::unordered_map<double, av_magnetisation> make_magnetisation_map(std::vector<std::string> const& files, int pow) {
+std::map<double, av_magnetisation> make_magnetisation_map(std::vector<std::string> const& files, int pow) {
         angle_lattice lat = empty_angle_lattice_from_path(files[0]);
-        std::unordered_map<double, av_magnetisation> mag_map;
+        std::map<double, av_magnetisation> mag_map;
         for(std::string const& st : files) {
                 double time = timestep(st);
                 lattice_read(lat, st);
                 magnetisation mag(lat);
-                if(mag_map.count(time) != 0) {
+                if(mag_map.count(time) == 0) {
                        av_magnetisation av_mag(pow);
                        mag_map.insert(std::make_pair(time, av_mag));
                        mag_map.at(time).add(mag);      
@@ -106,3 +105,22 @@ std::unordered_map<double, av_magnetisation> make_magnetisation_map(std::vector<
         return mag_map;
 };
 
+void write_binder_cumulant(std::map<double, double> const& binder_map, std::string const& dir, std::string const& name) {
+        std::string path = dir + "/" + name;         
+        std::ofstream file(path);
+        for(std::map<double, double>::const_iterator iter = binder_map.cbegin(); iter != binder_map.cend(); iter++) {
+                double time = (*iter).first;
+                double mag = (*iter).second;    
+                file << time << " " << mag << std::endl;
+        };
+};
+
+void write_vortex_number(std::map<double, av_vortex_number> const& vortex_map, std::string const& dir, std::string const& name) {
+        std::string path = dir + "/" + name;
+        std::ofstream file(path);
+        for(std::map<double, av_vortex_number>::const_iterator iter = vortex_map.cbegin(); iter != vortex_map.cend(); iter++) {
+                double time = (*iter).first;
+                file << time << " " << std::fixed << std::setprecision(8)  << (*iter).second.get_av_vor() << " " << (*iter).second.get_av_anti_vor() << std::endl;
+        };
+};
+   

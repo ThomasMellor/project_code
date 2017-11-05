@@ -2,7 +2,7 @@
 #define MAGNETISATION_H
 #include "system.h"
 #include <vector>
-#include <unordered_map>
+#include <map>
 
 std::vector<double> angle_components(double const&);
 
@@ -33,8 +33,7 @@ double magnitude_pow(magnetisation const&, int);
 
 double binder_cumulant(av_magnetisation const&, av_magnetisation const&);
 
-std::unordered_map<double, double> make_binder_cumulant_map(std::unordered_map<double, av_magnetisation>, 
-                                                                std::unordered_map<double, av_magnetisation>);
-
+std::map<double, double> make_binder_cumulant_map(std::map<double, av_magnetisation>, 
+                                                                std::map<double, av_magnetisation>);
 #endif
 

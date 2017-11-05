@@ -1,7 +1,9 @@
 #ifndef SIMULATION_UTILITY_H 
 #define SIMULATION_UTILITY_H
 #include <iostream>
-#include <sstream> 
+#include <sstream>
+#include <vector>
+#include <string> 
 #include "lattice_io.h"
 /*
 template <typename T> bool value_check(std::string line, T&val) { 
@@ -36,6 +38,9 @@ template <typename T> bool check_positive_sign(T& val) {
 */
 
 void check_dir(std::string&);
+
+bool check_files_exist(std::vector<std::string>);
+
 
 
 #endif
