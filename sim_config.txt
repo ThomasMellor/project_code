@@ -1,0 +1,12 @@
+Dx=1
+Dy=1
+Lx=1
+Ly=1
+cL=0
+dt=1
+Lattice size=2
+Number of iterations=4
+Number of simulations=1
+Iterations per save=1
+Disordered=y
+

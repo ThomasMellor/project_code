@@ -4,6 +4,17 @@
 #include <stdlib.h>
 #include <utility> 
 
+bool check_dir_exists(std::string path){ 
+        struct stat sb;
+        if(stat(path.c_str(), &sb) == 0 && S_ISDIR(sb.st_mode)){
+                return true;
+        } else {
+                return false;
+        };       
+};
+
+
+
 unsigned int num_words_in_string(std::string path) {
         std::stringstream stream(path);
         std::string word;

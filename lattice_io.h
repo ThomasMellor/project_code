@@ -1,5 +1,5 @@
 #ifndef LATTICE_IO_H
-#define LATTICE_IO_D
+#define LATTICE_IO_H
 #include <fstream> 
 #include <iostream>
 #include <iterator>
@@ -20,12 +20,9 @@ std::vector<std::string> list_files(std::string);
  
 double timestep(std::string file);
 
+bool check_dir_exists(std::string);
+
 template <typename T> void lattice_write(lattice<T> const& lat, std::string  path) {	
-        struct stat sb;
-        if(!(stat(path.c_str(), &sb) == 0 && S_ISDIR(sb.st_mode))){
-                std::cerr << "Directory not found. Error" << std::endl;
-                exit(1);
-        };  
 	std::ofstream file(path);                                                                         
 	for(int j = 0; j < lat.size(); j++) {                                                             
 		for(int k = 0; k < lat.size(); k++) {                                                         
@@ -63,7 +60,6 @@ angle_lattice empty_angle_lattice_from_path(std::string const& path);
 std::unordered_map<double, av_vortex_number> make_vortex_map(std::vector<std::string> const &);
 
 std::unordered_map<double, av_magnetisation> make_magnetisation_map(std::vector<std::string> const&, int);
-
 
 template <typename T> void write_line(lattice<T> & lat, std::string const& line, int line_num) {
 	int pos_in_line = 0; 
