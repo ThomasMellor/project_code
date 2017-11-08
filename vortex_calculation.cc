@@ -31,9 +31,9 @@ int circulation(angle_lattice const& lat, int i, int j) {
 double angle_difference(angle_lattice const& lat, int i1, int j1, int i2, int j2){
 	double dif = lat.point(i1, j1) - lat.point(i2, j2);
 	if (dif < -M_PI) {
-		dif+= 2*M_PI;
+		dif += 2*M_PI;
 	} else if(dif > M_PI) {
-		dif+= -2*M_PI;
+		dif -= 2*M_PI;
 	};
         return dif;
 };	
