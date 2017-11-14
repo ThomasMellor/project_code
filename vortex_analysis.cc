@@ -4,7 +4,7 @@
 #include "vortex_calculation.h"
 
 int main() {
-        std::cout << "Welcome to the magnetisation data extraction. Please type the directory where the files "
+        std::cout << "Welcome to the vortex data extraction. Please type the directory where the files "
                   << "that has the simulation results:" << std::endl;
         std::string read_directory;
         getline(std::cin, read_directory);
@@ -24,6 +24,8 @@ int main() {
         std::string file_name;
         getline(std::cin, file_name);
         std::map<double, av_vortex_number> vortex_map = make_vortex_map(file_vec);
-        write_vortex_number(vortex_map, write_directory, file_name);
+		std::cout << "We will perform vortex analysis from directory " << read_directory 
+				  << " and save the results to " << write_directory << "/" << file_name << std::endl;
+		write_vortex_number(vortex_map, write_directory, file_name);
 };
 

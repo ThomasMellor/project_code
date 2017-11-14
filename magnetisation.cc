@@ -34,20 +34,21 @@ std::vector<double> calculate_components(angle_lattice const& lat) {
 };
 
 double magnitude_pow(magnetisation const& mag, int n) {
-        double val;
+        double val = 0;
         for(int i = 0; i < mag.components().size(); i++) {
                 val += pow(mag.components()[i], 2);
+				std::cout << "val = " << val << std::endl;
         };
-        double new_val = pow(val, ((double) n )/2);
-        return new_val; 
+		double exp = ((double) n)/2;
+        return pow(val, exp);
 };
 
 double binder_cumulant(av_magnetisation const& av_mag_2, av_magnetisation const& av_mag_4) {
-        if(av_mag_2.get_power() !=2 && av_mag_4.get_power() !=4) {
+        if(av_mag_2.get_power() !=2 || av_mag_4.get_power() !=4) {
                 std::cerr << "Error. The powers in the magnetisations are not correct" << std::endl;
                 exit(1);
         };
-        return 2 - av_mag_4.get_average()/pow(av_mag_2.get_average(), 2);
+        return 2 - av_mag_4.get_average()/(pow(av_mag_2.get_average(), 2));
 };
 
 std::map<double, double> make_binder_cumulant_map(std::map<double, av_magnetisation> mag2_map, std::map<double, av_magnetisation> mag4_map) {

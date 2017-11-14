@@ -64,11 +64,10 @@ int main() {
         check_sign_config(dt);
         int lat_size = 0;
         value_save_config(file, lat_size);
-        std::cout << lat_size;
         check_sign_config(lat_size);
         int num_iter = 0;
         value_save_config(file, num_iter);
-        check_sign_config(num_iter);
+//        check_sign_config(num_iter);
         int num_sim;
         value_save_config(file, num_sim);
         check_sign_config(num_sim);
