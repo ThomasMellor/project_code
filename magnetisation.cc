@@ -37,7 +37,6 @@ double magnitude_pow(magnetisation const& mag, int n) {
         double val = 0;
         for(int i = 0; i < mag.components().size(); i++) {
                 val += pow(mag.components()[i], 2);
-				std::cout << "val = " << val << std::endl;
         };
 		double exp = ((double) n)/2;
         return pow(val, exp);

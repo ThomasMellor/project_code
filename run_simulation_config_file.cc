@@ -33,12 +33,20 @@ template <typename T> void value_save_config(std::ifstream& file, T& val) {
 };
 
 template <typename T> void check_sign_config(T& val) {
-        if(val <= 0) {
-                std::cerr << std::to_string(val) << " has the wrong sign. Please edit file" << std::endl;
-                exit(1);
-        };
-        return;
+    if(val <= 0) {
+        std::cerr << std::to_string(val) << " has the wrong sign. Please edit file" << std::endl;
+            exit(1);
+    };
+    return;
 };
+
+template <typename T> void check_non_neg_config(T& val) {                                                        
+	if(val < 0) {                                                                                        
+		std::cerr << std::to_string(val) << " has the wrong sign. Please edit file" << std::endl;        
+		exit(1);                                                                                      
+	};                                                                                                    
+	return;                                                                                               
+};   
 
 int main() {
         std::cout << "Welcome to the KPZ simulation. Please type in the configuration file name:" << std::endl;
@@ -62,16 +70,19 @@ int main() {
         double dt;
         value_save_config(file, dt);
         check_sign_config(dt);
-        int lat_size = 0;
+        int lat_size;
         value_save_config(file, lat_size);
         check_sign_config(lat_size);
-        int num_iter = 0;
+        int num_iter;
         value_save_config(file, num_iter);
-//        check_sign_config(num_iter);
+		check_non_neg_config(num_iter);
         int num_sim;
         value_save_config(file, num_sim);
         check_sign_config(num_sim);
-        int num_save;
+		int num_prev;
+		value_save_config(file, num_prev);
+		check_non_neg_config(num_prev);	
+		int num_save;
         value_save_config(file, num_save);
         check_sign_config(num_save);
 
@@ -90,12 +101,13 @@ int main() {
         check_dir(directory);
 
         parameters param(Dx, Dy, Lx, Ly, cL);
-        sim_parameters sim_param(dt, num_iter, num_sim, num_save, init_cond);
+        sim_parameters sim_param(dt, num_iter, num_prev, num_sim, num_save, init_cond);
 
         std::cout << "This is a simulation with parameters: Dx = " << Dx << ", Dy = " << Dy
                 << ", Lx = " << Lx << ", Ly = " << Ly << ", cL = " << cL << std::endl;
         std::cout << "The simulation parameters are: timestep is " << dt << ", number of iterations is "
-                << num_iter << ", the number of simulations is " << num_sim
+                << num_iter << ", the number of simulations is " << num_sim 
+				<< ", the previous number of simulations is " << num_prev
                 << ", and the number of iterations per save is " << num_save << std::endl;
         std::cout << "The initial condition is " << init_cond << " and the directory the files will be save in is "
         << directory << std::endl;

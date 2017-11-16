@@ -13,11 +13,13 @@ class sim_parameters {
 		const double dt;
 		const unsigned int num_iter;
 		const unsigned int num_sim;
+		const unsigned int num_prev_sim;
 		const unsigned int num_per_save;
 		const std::string init_cond;
 	public: 
-		sim_parameters(double timestep, int iter, int sim, int save, std::string initial) :
-		   	dt(timestep), num_iter(iter), num_sim(sim), num_per_save(save), init_cond(initial) {}	
+		sim_parameters(double timestep, int iter, int prev, int sim, int save, std::string initial) :
+		   	dt(timestep), num_iter(iter), num_sim(sim), num_prev_sim(prev) ,num_per_save(save), 
+			init_cond(initial) {}	
 };
 
 void simulate(int, parameters&, sim_parameters&, std::string, int);

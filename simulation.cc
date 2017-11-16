@@ -41,7 +41,7 @@ void simulate(int lattice_size, parameters& par, sim_parameters& sim_par, std::s
 };
 
 void multiple_simulate(int lattice_size, parameters& par, sim_parameters& sim_par, std::string dir) {
-	for(int i = 0; i < sim_par.num_sim; i++) {
+	for(int i = sim_par.num_prev_sim; i < sim_par.num_sim + sim_par.num_prev_sim; i++) {
 		std::cout << "Simulation " << i+1 << ":" << std::endl;
 		simulate(lattice_size, par, sim_par, dir, i+1);
 		std::cout << std::endl;
