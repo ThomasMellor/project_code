@@ -20,6 +20,9 @@ def div_log(t):
 def log_div_log(t):
     return math.log(div_log(t))
 
+def iden(t):
+    return t
+
 def subset_graph(x1, x2, graph):
     subset = [[point[0], point[1]] for point in graph if                                                
                 (point[0] > x1) and (point[0] < x2)]
