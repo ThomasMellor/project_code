@@ -10,9 +10,8 @@ import operator
 
 cL_vor = []
 
-files = glob.glob("../vortices/N=64/dt=0.01/Lx=0Ly=0/num_sim=20cL=[01].[012345678]iter=40000.txt")
+files = glob.glob("../vortices/N=64/dt=0.01/Lx=0Ly=0/num_sim=20cL=[01].[0-9]iter=40000.txt")
 for path_file in files:
-    print path_file
     file_name = os.path.split(path_file)[1]
     cL = float(re.findall(r"\d+\.\d+|\d+", file_name)[1])
     graph = PF.graph_points(path_file)
