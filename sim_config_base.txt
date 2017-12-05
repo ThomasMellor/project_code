@@ -1,0 +1,13 @@
+Dx=1
+Dy=1
+Lx=0
+Ly=0
+cL=0.2
+dt=0.01
+Lattice size=64
+Number of iterations=491520
+Number of simulations=10
+Number of previous simulations=100
+Iterations per save=400
+Disordered=y
+
