@@ -9,6 +9,7 @@
 
 void update_progress_bar(int, sim_parameters&, int&);
 
+
 void simulate(int lattice_size, parameters& par, sim_parameters& sim_par, std::string dir, int sim_number) {
         int counter = 1;
 	int progress_counter = 1;

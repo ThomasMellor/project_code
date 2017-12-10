@@ -104,12 +104,13 @@ int main() {
         sim_parameters sim_param(dt, num_iter, num_prev, num_sim, num_save, init_cond);
 
         std::cout << "This is a simulation with parameters: Dx = " << Dx << ", Dy = " << Dy
-                << ", Lx = " << Lx << ", Ly = " << Ly << ", cL = " << cL << std::endl;
+                << ", Lx = " << Lx << ", Ly = " << Ly << ", cL = " << cL << ", lattice size = " 
+				<< lat_size << std::endl;
         std::cout << "The simulation parameters are: timestep is " << dt << ", number of iterations is "
                 << num_iter << ", the number of simulations is " << num_sim 
 				<< ", the previous number of simulations is " << num_prev
                 << ", and the number of iterations per save is " << num_save << std::endl;
-        std::cout << "The initial condition is " << init_cond << " and the directory the files will be save in is "
+        std::cout << "The initial condition is " << init_cond << " and the directory the files will be saved in is "
         << directory << std::endl;
 
         multiple_simulate(lat_size, param, sim_param, directory);
