@@ -40,7 +40,7 @@ unsigned int lattice<T>::size() const {
 
 template <typename T>
 int lattice<T>::point_1D(int i, int j, int N) {
-	return N*mv_inside(i, N) + mv_inside(j, N);
+	return N*i + j;
 };
 
 template <typename T>
@@ -90,8 +90,8 @@ lattice<T>& lattice<T>::operator=(const lattice& lat) {
  */
 template <typename T>
 void print(lattice<T> const &lat) {
-	for(int i = 0; i < lat.size(); i++) {
-		for(int j = 0; j < lat.size(); j++) {
+	for(int j = 0; j < lat.size(); j++) {
+		for(int i = 0; i < lat.size(); i++) {
 			std::cout << lat.point(i, j) << " ";
 		};
 		std::cout << std::endl;
