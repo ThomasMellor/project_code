@@ -1,22 +1,37 @@
 #ifndef UPDATER_H
 #define UPDATER_H
 #include "system.h"
+#include <random>
+#include "pcg_random.hpp"
 
-
-class parameters {																																															friend angle_lattice update_lattice(const angle_lattice&, const parameters&, double);                                                   
+/*
+ * Physical variables object
+ */
+class parameters {																																															friend angle_lattice update_lattice(const angle_lattice&, parameters&, double);                                                   
+	friend angle_lattice update_even(const angle_lattice&, parameters&, double);
+	friend angle_lattice update_odd(const angle_lattice&, parameters&, double);
 	private:				        
+		const static int rn_div = pow(2,20);
 		const double Dx;                                                                                            
 		const double Dy;                                                                                            
 		const double Lx;                                                                                            
 		const double Ly;                                                                                            
 		const double Cl;
-	public:										                                                                                                              
-		parameters(double dx, double dy, double lx, double ly, double cl) : Dx(dx), Dy(dy), Lx(lx), Ly(ly), Cl(cl) {}           
-};                                                                                                             
-                                                                                                              
-angle_lattice update_lattice(const angle_lattice&, const parameters&, double);
+		std::random_device rd;
+		pcg32 rng;
+       	std::uniform_int_distribution<int> urd;
 
-double sin_points(const angle_lattice&, int, int, int, int);
-double cos_points(const angle_lattice&, int, int, int, int);
+	public:										                                                                                                              
+		parameters(double dx, double dy, double lx, double ly, double cl) : Dx(dx), Dy(dy), Lx(lx), Ly(ly), Cl(cl)
+		, rng(rd()), urd(std::uniform_int_distribution<int>(0, rn_div)) {}        
+		double random_real();	
+};                                                                                                             
+
+angle_lattice update_lattice(const angle_lattice&, parameters&, double);
+angle_lattice update_even(const angle_lattice&, parameters&, double);
+angle_lattice update_odd(const angle_lattice&, parameters&, double);
+
+double sin_points(const angle_lattice&, int, int, int, int); //sin of difference of two points 
+double cos_points(const angle_lattice&, int, int, int, int); //cos of difference of two points
 
 #endif	
