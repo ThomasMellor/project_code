@@ -5,12 +5,19 @@
 #include <stdexcept>
 #include "vortex_calculation.h"
 
+
 void angle_lattice::set(int x, int y, double ang) {
 	lattice<double>::set(x, y, mod(ang,2*M_PI));
 };
 
+/*
+ * Constructor
+ */
 angle_lattice::angle_lattice(int N) : lattice<double>(N) {};
 
+/*
+ * Sets (x,y) to charge 'charge' and updates the number of charges accordingly
+ */
 void vortex_lattice::set(int x, int y, int charge) {
 	int pre_charge = this -> point(x, y);
 	int added_charge = sign(charge);	
@@ -37,8 +44,14 @@ void vortex_lattice::set(int x, int y, int charge) {
 	};	
 };
 
+/*
+ * Constructor
+ */
 vortex_lattice::vortex_lattice(int N) : lattice<int>(N) {};
 
+/*
+ *Returns a vortex lattice set from the angle lattice lat
+ */
 vortex_lattice& vortex_lattice::set_vortex_lattice(angle_lattice const& lat) {
         if((*this).size() != lat.size()){
                 std::cerr << "Vortex lattice and angle lattice not the same size. Error. " << std::endl;
@@ -51,4 +64,3 @@ vortex_lattice& vortex_lattice::set_vortex_lattice(angle_lattice const& lat) {
         };
         return *this;
 };
-
