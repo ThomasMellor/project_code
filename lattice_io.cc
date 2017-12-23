@@ -97,7 +97,7 @@ std::map<double, av_magnetisation> make_magnetisation_map(std::vector<std::strin
                 if(mag_map.count(time) == 0) {
                        av_magnetisation av_mag(pow);
                        mag_map.insert(std::make_pair(time, av_mag));
-                       mag_map.at(time).add(mag);      
+                       mag_map.at(time).add(mag); // [] does not work as no default contructor for av_mag    
                 } else {
                         mag_map.at(time).add(mag);
                 };

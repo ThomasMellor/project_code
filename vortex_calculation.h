@@ -3,9 +3,13 @@
 
 #include "system.h"
 
+
 int circulation(angle_lattice const&, int, int);
 double angle_difference(angle_lattice const&, int, int, int, int);                            
 
+/*
+ * Stores the number of vortices and anti vortices in an angle lattice 
+ */
 class vortex_number {
 	private:
 		const unsigned int num_vor;
@@ -16,6 +20,10 @@ class vortex_number {
 		int get_num_anti_vor() const {return num_anti_vor;};
 };
 
+/*
+ * Stores average number of vortices and anti vortices as you 
+ * 'add' vortex_number objects to it
+ */
 class av_vortex_number {
         private: 
                 double av_vor = 0;
@@ -24,7 +32,7 @@ class av_vortex_number {
         public:
                 double get_av_vor() const {return av_vor;};
                 double get_av_anti_vor() const {return av_anti_vor;};
-                av_vortex_number& add(vortex_number const&);
+                av_vortex_number& add(vortex_number const&); // reaverages vortex numbers
 };
 
 vortex_number make_vortex_number(angle_lattice const&);

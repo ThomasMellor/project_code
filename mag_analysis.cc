@@ -19,7 +19,7 @@ int main() {
             std::cerr << "No files!" << std::endl;
             exit(1);
     }; 
-
+	std::cout << file_vec.size();
     std::cout << "Please type in the file you want to name this:" << std::endl;
     std::string file_name;
     getline(std::cin, file_name);

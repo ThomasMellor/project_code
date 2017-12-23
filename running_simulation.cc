@@ -5,16 +5,16 @@
 #include "simulation_utility.h"
 
 template <typename T> void value_save(std::string name, T& val) {                                                                  
-        std::cout << name << ": ";      
+    std::cout << name << ": ";      
         
-        std::string line;
-        while(std::getline(std::cin, line)){
-                std::istringstream is {line};
-                if((is >> val) && !(is >> line)){
-                        break;
-                };
-                std::cerr << "Invalid input. Please try again: ";
-        };
+    std::string line;
+    while(std::getline(std::cin, line)){
+		std::istringstream is {line};
+		if((is >> val) && !(is >> line)){
+			break;
+		};
+		std::cerr << "Invalid input. Please try again: ";
+    };
 };
 
 template <typename T> void check_sign(T& val) {
@@ -22,6 +22,13 @@ template <typename T> void check_sign(T& val) {
                 std::cout << "Invalid input. Please try again";
                 value_save("", val);
         };
+};
+
+template <typename T> void check_non_neg(T& val) {                                                               
+	while(val < 0) {                                                                                     
+		std::cout << "Invalid input. Please try again";                                               
+		value_save("", val);                                                                          
+	};                                                                                                    
 };
 
 int main() {
@@ -48,6 +55,10 @@ int main() {
 	int num_sim;
 	value_save("Number of simulations", num_sim);
 	check_sign(num_sim);
+	int num_prev;                                                                                         
+    value_save("Number of previous simulations", num_prev);                                                                    
+	check_non_neg(num_prev);    
+
 	int num_save;
 	value_save("Number of iterations per save", num_save);
 	check_sign(num_save);
@@ -65,7 +76,7 @@ int main() {
         check_dir(directory);        
 
 	parameters param(Dx, Dy, Lx, Ly, cL);
-	sim_parameters sim_param(dt, num_iter, num_sim, num_save, init_cond);
+	sim_parameters sim_param(dt, num_iter, num_prev, num_sim, num_save, init_cond);
 	
 	std::cout << "This is a simulation with parameters: Dx = " << Dx << ", Dy = " << Dy
 		<< ", Lx = " << Lx << ", Ly = " << Ly << ", cL = " << cL << std::endl;

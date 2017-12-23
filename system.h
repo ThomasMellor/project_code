@@ -21,7 +21,7 @@ template<typename T> class lattice{
 		static int point_1D(int, int, int);
 		static int mv_inside(int, int); 
 	protected:
-		static double mod(double, double) ;
+		template <typename R, typename S> static  T mod(R, S) ;
 	public:
 		lattice(unsigned int);
 		lattice(const lattice&);
@@ -40,17 +40,17 @@ unsigned int lattice<T>::size() const {
 
 template <typename T>
 int lattice<T>::point_1D(int i, int j, int N) {
-	return N*i + j;
+	return N*mv_inside(i, N) + mv_inside(j, N);
 };
 
 template <typename T>
 int lattice<T>::mv_inside(int i, int j) {
-	if( i >= 0 && i < j) { 
+ 	if(i >= 0 & i < j){
 		return i;
-	} else if(i == j) {
-		return 0;
-	} else {	
-		return j-1;
+	} else if(i < 0) {
+		return j - 1;
+	} else {
+	return 0;
 	};
 };
 
@@ -79,7 +79,7 @@ lattice<T>::lattice(const lattice& lat) : N(lat.size()) {
 template <typename T>
 lattice<T>& lattice<T>::operator=(const lattice& lat) {
 	if( this -> size() != lat.size()) {
-		throw std::invalid_argument("latices not the same size");
+		throw std::invalid_argument("lattices not the same size");
 	};
         this -> lattice_points = lat.lattice_points;
         return *this;
@@ -87,7 +87,7 @@ lattice<T>& lattice<T>::operator=(const lattice& lat) {
 
 /*
  * Prints lattice to standard output
- */
+*/
 template <typename T>
 void print(lattice<T> const &lat) {
 	for(int j = 0; j < lat.size(); j++) {
@@ -102,8 +102,9 @@ void print(lattice<T> const &lat) {
  *returns the positive a mod b        
  */
 template <typename T>
-double lattice<T>::mod(double a, double b) {    
-	double ret = fmod(a, b);    
+template <typename R, typename S> 
+T lattice<T>::mod(R a, S b) {    
+	T ret = fmod(a, b);    
 		if(ret < 0){    
 			ret += b;    
 		};    

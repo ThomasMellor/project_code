@@ -4,10 +4,13 @@
 #include <vector>
 #include <map>
 
-std::vector<double> angle_components(double const&);
+std::vector<double> angle_components(double const&); // (cos val, sin val) from val 
 
-std::vector<double> calculate_components(angle_lattice const&);
+std::vector<double> calculate_components(angle_lattice const&); // av angle_components in the lattice
 
+/*
+ *  Stores av angle_components in lattice
+ */
 class magnetisation {
         private:
                 std::vector<double> comp;
@@ -16,15 +19,18 @@ class magnetisation {
                 magnetisation(angle_lattice const& lat) : comp(calculate_components(lat)) {};
 };
 
+/*
+ * Stores the average of the magnitude of the magnetisation to a power  
+ */
 class av_magnetisation {
         private:
                 double average = 0;
                 unsigned int averaging_num = 0;
-                const int power;
+                const int power;  
         public:
                 int get_power() const {return power;}
                 av_magnetisation(int pow) : power(pow) {}; 
-                av_magnetisation& add(magnetisation const&);
+                av_magnetisation& add(magnetisation const&); // reaverages with the addition on object
                 double get_average() const {return average;};
                 av_magnetisation() : power(0) {};
 };

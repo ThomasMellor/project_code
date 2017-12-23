@@ -12,6 +12,7 @@ vortex_lattice& make_vor_lattice(angle_lattice const& lat) {
 };      
 */
 
+
 int circulation(angle_lattice const& lat, int i, int j) {
 	double total_angle = 0;
    	total_angle += angle_difference(lat, i+1, j, i, j);	
