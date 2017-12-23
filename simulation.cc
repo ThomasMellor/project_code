@@ -19,11 +19,11 @@ void simulate(int lattice_size, parameters& par, sim_parameters& sim_par, std::s
 		lat = disordered(lattice_size);
 	};
 	angle_lattice new_lat(lattice_size);
-	std::string path = dir + "/simulation:dt," + std::to_string(sim_par.dt) 
-	        + ",iter_num," + std::to_string(0) 
+	std::string path = dir + "/simulation:dt," + std::to_string(sim_par.dt)
+	        + ",iter_num," + std::to_string(0)
                 + ",sim_num," + std::to_string(sim_number) + ".txt";
 
-        lattice_write(lat, path);	
+        lattice_write(lat, path);
 
 	for(int iteration_num = 0; iteration_num < sim_par.num_iter; iteration_num++) {
 		update_progress_bar(iteration_num, sim_par, progress_counter);
@@ -32,13 +32,13 @@ void simulate(int lattice_size, parameters& par, sim_parameters& sim_par, std::s
 		if(counter == sim_par.num_per_save) {
 			counter = 0;
 			std::string path = dir + "/simulation:dt,"+ std::to_string(sim_par.dt) +
-				+ ",iter_num," + std::to_string(iteration_num + 1) 
+				+ ",iter_num," + std::to_string(iteration_num + 1)
                                 + ",sim_num," + std::to_string(sim_number) + ".txt";
-			lattice_write(new_lat, path);  
+			lattice_write(new_lat, path);
 		};
 		counter++;
-		lat = new_lat;		
-	};	
+		lat = new_lat;
+	};
 };
 
 void multiple_simulate(int lattice_size, parameters& par, sim_parameters& sim_par, std::string dir) {
@@ -49,16 +49,16 @@ void multiple_simulate(int lattice_size, parameters& par, sim_parameters& sim_pa
 	};
 };
 
-void update_progress_bar(int iteration_num, sim_parameters& sim_par, int& progress_counter) {                 
-	if(iteration_num == 0){                                                                                   
-		std::cout << "[";                                                                                     
-	};                                                                                                        
-	if(( (double) iteration_num)/sim_par.num_iter*10 > progress_counter) {                                    
-		std::cout << "#" << std::flush;                                        
-		progress_counter++;                                                                                   
-	};                                                                                                        
-	if(iteration_num == (sim_par.num_iter - 1)){                                                                
-		std::cout << "]" << std::flush;                                                                           
-	};                                                                                                        
+void update_progress_bar(int iteration_num, sim_parameters& sim_par, int& progress_counter) {
+	if(iteration_num == 0){
+		std::cout << "[";
+	};
+	if(( (double) iteration_num)/sim_par.num_iter*10 > progress_counter) {
+		std::cout << "#" << std::flush;
+		progress_counter++;
+	};
+	if(iteration_num == (sim_par.num_iter - 1)){
+		std::cout << "]" << std::flush;
+	};
 };
 

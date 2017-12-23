@@ -18,16 +18,17 @@ std::vector<double> angle_components(double const& val) {
 
 std::vector<double> calculate_components(angle_lattice const& lat) {
         std::vector<double> comp = {0, 0};
-        for(int i = 0; i < lat.size(); i++) {
-                for(int j = 0; j < lat.size(); j++) {
+		int N = lat.size();
+		for(int i = 0; i < N; i++) {
+                for(int j = 0; j < N; j++) {
                         std::vector<double> added_comps = angle_components(lat.point(i, j));
                         for(int k = 0; k < comp.size(); k++) {
-                                comp[k] += added_comps[k];
+							comp[k] += added_comps[k];
                         }; 
                 };
         };
         for(int i = 0; i < comp.size(); i++) {
-                double val = comp[i]/(lat.size()*lat.size());
+                double val = comp[i]/(N*N);
                 comp[i] = val;
         };
         return comp;

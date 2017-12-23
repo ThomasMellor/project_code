@@ -4,7 +4,12 @@
 #include "updater.h"
 #include "fstream"
 #include <string>
+#include "math.h"
+#include <random>
 
+/*
+ * Simulation parameters object. These related to the simulation type.
+ */
 class sim_parameters {
 	friend void simulate(int, parameters&, sim_parameters&, std::string, int);
 	friend void multiple_simulate(int, parameters&, sim_parameters&, std::string);
@@ -16,15 +21,17 @@ class sim_parameters {
 		const unsigned int num_prev_sim;
 		const unsigned int num_per_save;
 		const std::string init_cond;
-	public: 
+	public:
 		sim_parameters(double timestep, int iter, int prev, int sim, int save, std::string initial) :
-		   	dt(timestep), num_iter(iter), num_sim(sim), num_prev_sim(prev) ,num_per_save(save), 
-			init_cond(initial) {}	
+		   	dt(timestep), num_iter(iter), num_sim(sim), num_prev_sim(prev), num_per_save(save),
+			init_cond(initial) {}
 };
+
+
 
 void simulate(int, parameters&, sim_parameters&, std::string, int);
 void multiple_simulate(int, parameters&, sim_parameters&, std::string);
-void update_progress_bar(int, sim_parameters&, int&);                 
+void update_progress_bar(int, sim_parameters&, int&);
 
 
 #endif
