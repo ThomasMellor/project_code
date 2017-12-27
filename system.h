@@ -105,9 +105,9 @@ template <typename T>
 template <typename R, typename S> 
 T lattice<T>::mod(R a, S b) {    
 	T ret = fmod(a, b);    
-		if(ret < 0){    
-			ret += b;    
-		};    
+	if(ret < 0) {
+		ret += b;
+	};
 	return ret;    
 };
 

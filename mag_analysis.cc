@@ -27,8 +27,8 @@ int main() {
 	std::cout << "This is a magnetisation data extraction from directory " << read_directory
 		      << " and saved in " << write_directory << "/" << file_name << std::endl;
 
-    std::map<double, av_magnetisation> mag2_map = make_magnetisation_map(file_vec, 2);
-    std::map<double, av_magnetisation> mag4_map = make_magnetisation_map(file_vec, 4);
-    std::map<double, double> binder_cumulant_map = make_binder_cumulant_map(mag2_map, mag4_map);
+	std::vector<std::map<double, av_magnetisation>> mag_map_list = make_magnetisation_map(file_vec, {2,4});
+    
+    std::map<double, double> binder_cumulant_map = make_binder_cumulant_map(mag_map_list[0], mag_map_list[1]);
     write_binder_cumulant(binder_cumulant_map, write_directory, file_name);
 };

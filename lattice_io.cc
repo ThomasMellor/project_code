@@ -87,22 +87,24 @@ std::map<double, av_vortex_number> make_vortex_map(std::vector<std::string> cons
         return vor_map;
 };
 
-std::map<double, av_magnetisation> make_magnetisation_map(std::vector<std::string> const& files, int pow) {
-        angle_lattice lat = empty_angle_lattice_from_path(files[0]);
-        std::map<double, av_magnetisation> mag_map;
-        for(std::string const& st : files) {
-                double time = timestep(st);
-                lattice_read(lat, st);
-                magnetisation mag(lat);
-                if(mag_map.count(time) == 0) {
-                       av_magnetisation av_mag(pow);
-                       mag_map.insert(std::make_pair(time, av_mag));
-                       mag_map.at(time).add(mag); // [] does not work as no default contructor for av_mag    
-                } else {
-                        mag_map.at(time).add(mag);
-                };
-        };
-        return mag_map;
+std::vector<std::map<double, av_magnetisation>> make_magnetisation_map(std::vector<std::string> const& files, std::initializer_list<int> pow_args) {
+    angle_lattice lat = empty_angle_lattice_from_path(files[0]);
+	std::vector<std::map<double, av_magnetisation>> mag_map_list(pow_args.size());
+    for(std::string const& st : files) {
+        double time = timestep(st);
+        lattice_read(lat, st);
+        magnetisation mag(lat);
+		for(size_t i = 0; i < pow_args.size(); i++) {
+			if(mag_map_list[i].count(time) == 0) {
+                av_magnetisation av_mag(pow_args.begin()[i]);
+                mag_map_list[i].insert(std::make_pair(time, av_mag));
+                mag_map_list[i].at(time).add(mag); // [] does not work as no default contructor for av_mag    
+            } else {
+                mag_map_list[i].at(time).add(mag);
+            };
+		};
+	};
+    return mag_map_list;
 };
 
 void write_binder_cumulant(std::map<double, double> const& binder_map, std::string const& dir, std::string const& name) {

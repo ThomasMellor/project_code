@@ -11,7 +11,7 @@
 #include <map> 
 #include "vortex_calculation.h"
 #include "magnetisation.h"
-
+#include <initializer_list>
 
 /*
  * Functions related to I/O
@@ -70,7 +70,7 @@ angle_lattice empty_angle_lattice_from_path(std::string const& path); // empty l
 
 std::map<double, av_vortex_number> make_vortex_map(std::vector<std::string> const &);
 
-std::map<double, av_magnetisation> make_magnetisation_map(std::vector<std::string> const&, int);
+std::vector<std::map<double, av_magnetisation>> make_magnetisation_map(std::vector<std::string> const&, std::initializer_list<int>);
 
 /*
  * Writes line to line_num of lat

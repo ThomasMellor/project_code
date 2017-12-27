@@ -4,12 +4,18 @@
 #include <map>
 
 av_magnetisation& av_magnetisation::add(magnetisation const& mag) {
-        int num = (*this).averaging_num;
-        double old_ave = (*this).average;
-        (*this).average = ((double) old_ave*num + magnitude_pow(mag, (*this).power))/(num + 1);  
+        (*this).total += magnitude_pow(mag, (*this).power);  
         (*this).averaging_num++;
         return *this;
 };
+
+double av_magnetisation::get_average() const {
+	if (averaging_num == 0) {
+		return 0;
+	} else {
+		return total/averaging_num;
+	};
+};	
 
 std::vector<double> angle_components(double const& val) {
         std::vector<double> comps = {cos(val), sin(val)};
@@ -64,4 +70,8 @@ std::map<double, double> make_binder_cumulant_map(std::map<double, av_magnetisat
                 std::cout << binder_map[time] << std::endl;
         };
         return binder_map; 
+};
+
+void print(magnetisation const& mag) {
+	std::cout << mag.components()[0] << " " << mag.components()[1] << std::endl; 
 };

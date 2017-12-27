@@ -7,7 +7,7 @@
 
 
 void angle_lattice::set(int x, int y, double ang) {
-	lattice<double>::set(x, y, mod(ang,2*M_PI));
+	lattice<double>::set(x, y, mod(ang, 2*M_PI));
 };
 
 /*
