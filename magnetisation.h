@@ -24,14 +24,14 @@ class magnetisation {
  */
 class av_magnetisation {
         private:
-                double average = 0;
+                double total = 0;
                 unsigned int averaging_num = 0;
                 const int power;  
         public:
                 int get_power() const {return power;}
                 av_magnetisation(int pow) : power(pow) {}; 
                 av_magnetisation& add(magnetisation const&); // reaverages with the addition on object
-                double get_average() const {return average;};
+                double get_average() const;
                 av_magnetisation() : power(0) {};
 };
 
@@ -41,5 +41,8 @@ double binder_cumulant(av_magnetisation const&, av_magnetisation const&);
 
 std::map<double, double> make_binder_cumulant_map(std::map<double, av_magnetisation>, 
                                                                 std::map<double, av_magnetisation>);
+
+void print(magnetisation const&);
+
 #endif
 
