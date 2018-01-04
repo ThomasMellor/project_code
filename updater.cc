@@ -68,12 +68,12 @@ angle_lattice update_even(const angle_lattice& lat, parameters& par, double dt) 
 				dt*(-par.Dx*(sin_right + sin_left)
 				-par.Dy*(sin_up + sin_down)
 				-par.Lx/2*(cos_left + cos_right - 2)
-				-par.Ly/2*(cos_up + cos_down - 2));
+				-par.Ly/2*(cos_up + cos_down - 2))
 			+sqrtdt*2*M_PI*par.Cl*(urd(rng)/rn_div - 0.5);
 			new_lat.set(i, j, mid_val);
 
 			double left_val = ang_left + new_lat.point(i - 1, j) +
-                +dt*(-par.Dx*(-sin_left) -par.Lx/2*cos_left + par.Lx + par.Ly);
+                +dt*(-par.Dx*(-sin_left) -par.Lx/2*cos_left + par.Lx + par.Ly)
 			   	+sqrtdt*2*M_PI*par.Cl*(urd(rng)/rn_div - 0.5);
 			new_lat.set(i - 1, j, left_val);
 
