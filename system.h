@@ -45,7 +45,7 @@ int lattice<T>::point_1D(int i, int j, int N) {
 
 template <typename T>
 int lattice<T>::mv_inside(int i, int j) {
- 	if(i >= 0 & i < j){
+ 	if(i >= 0 && i < j){
 		return i;
 	} else if(i < 0) {
 		return j - 1;
