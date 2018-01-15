@@ -8,13 +8,13 @@ double sin_points(const angle_lattice&, int, int, int, int);
 double cos_points(const angle_lattice&, int, int, int, int);
 
 angle_lattice update_lattice(const angle_lattice& lat, parameters& par, double dt) {
-//	if((lat.size() % 2) == 0) {
+	if((lat.size() % 2) == 0) {
+		angle_lattice new_lat = update_even(lat, par, dt);
+		return new_lat;
+	} else {
 		angle_lattice new_lat = update_odd(lat, par, dt);
 		return new_lat;
-//	} else {
-//		angle_lattice new_lat = update_odd(lat, par, dt);
-//		return new_lat;
-//	};
+	};
 };
 
 double parameters::random_real() {
@@ -32,10 +32,10 @@ double cos_points(const angle_lattice& lat, int i1, int j1, int i2, int j2) {
 angle_lattice update_even(const angle_lattice& lat, parameters& par, double dt) {
 	
 	std::random_device rd;                                                                                
-	pcg32_fast rng(rd());
+	
 	int rn_div = pow(2,20); 	
 	std::uniform_int_distribution<int> urd(0, rn_div);	
-	
+	std::mt19937 rng(rd());	
 	int N = lat.size();
 	angle_lattice new_lat(N);
 	double sqrtdt = sqrt(dt);
@@ -69,12 +69,12 @@ angle_lattice update_even(const angle_lattice& lat, parameters& par, double dt) 
 				-par.Dy*(sin_up + sin_down)
 				-par.Lx/2*(cos_left + cos_right - 2)
 				-par.Ly/2*(cos_up + cos_down - 2))
-			+sqrtdt*2*M_PI*par.Cl*(urd(rng)/rn_div - 0.5);
+			+sqrtdt*2*M_PI*par.Cl*(( (double) urd(rng))/rn_div - 0.5);
 			new_lat.set(i, j, mid_val);
 
 			double left_val = ang_left + new_lat.point(i - 1, j) +
                 +dt*(-par.Dx*(-sin_left) -par.Lx/2*cos_left + par.Lx + par.Ly)
-			   	+sqrtdt*2*M_PI*par.Cl*(urd(rng)/rn_div - 0.5);
+			   	+sqrtdt*2*M_PI*par.Cl*( ((double) urd(rng))/rn_div - 0.5);
 			new_lat.set(i - 1, j, left_val);
 
 			double right_val = new_lat.point(i + 1, j) +
@@ -128,7 +128,7 @@ angle_lattice update_odd(const angle_lattice& lat, parameters& par, double dt) {
 				-par.Dy*(sin_up + sin_down)
 				-par.Lx/2*(cos_left + cos_right - 2)
 				-par.Ly/2*(cos_up + cos_down - 2))
-                +sqrtdt*2*M_PI*par.Cl*urd(rng)/rn_div;
+                +sqrtdt*2*M_PI*par.Cl*(((double) urd(rng))/rn_div - 0.5);
 			new_lat.set(i, j, mid_val);
 		};
 	};

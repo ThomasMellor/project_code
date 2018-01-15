@@ -23,9 +23,9 @@ int main() {
         std::cout << "Please type in the file you want to name this:" << std::endl;
         std::string file_name;
         getline(std::cin, file_name);
-        std::map<double, av_vortex_number> vortex_map = make_vortex_map(file_vec);
 		std::cout << "We will perform vortex analysis from directory " << read_directory 
 				  << " and save the results to " << write_directory << "/" << file_name << std::endl;
+		std::map<double, av_vortex_number> vortex_map = make_vortex_map(file_vec);
 		write_vortex_number(vortex_map, write_directory, file_name);
 };
 
