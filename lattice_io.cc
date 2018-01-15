@@ -117,6 +117,16 @@ void write_binder_cumulant(std::map<double, double> const& binder_map, std::stri
         };
 };
 
+void write_magnetisation(std::map<double, av_magnetisation> const& mag_map, std::string const& dir, std::string const& name) {
+	std::string path = dir + "/" + name;
+	std::ofstream file(path);
+	for(std::map<double, av_magnetisation>::const_iterator iter = mag_map.cbegin(); iter != mag_map.cend(); iter++){
+		double time = (*iter).first;
+		double mag = (*iter).second.get_average();
+		file << time << " " << mag << std::endl;		
+	};
+};
+
 void write_vortex_number(std::map<double, av_vortex_number> const& vortex_map, std::string const& dir, std::string const& name) {
         std::string path = dir + "/" + name;
         std::ofstream file(path);

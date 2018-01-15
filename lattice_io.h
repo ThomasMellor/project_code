@@ -89,7 +89,12 @@ template <typename T> void write_line(lattice<T> & lat, std::string const& line,
 /*
  * Write binder map to file
  */
-void write_binder_cumulant(std::map<double, double> const&, std::string const&, std::string const&);
+void write_binder_cumulant(std::map<double, double> const& binder_map, std::string const&, std::string const&);
+
+/*
+ * Write magnetisation squared map to file
+ */
+void write_magnetisation(std::map<double, av_magnetisation> const& mag_map, std::string const& dir, std::string const& name);
 
 /*
  * Write vortex map to file
