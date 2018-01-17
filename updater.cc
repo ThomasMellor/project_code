@@ -31,11 +31,11 @@ double cos_points(const angle_lattice& lat, int i1, int j1, int i2, int j2) {
 
 angle_lattice update_even(const angle_lattice& lat, parameters& par, double dt) {
 	
-	std::random_device rd;                                                                                
+	pcg_extras::seed_seq_from<std::random_device> seed_source;                                                
+	pcg32_fast rng(seed_source); 
 	
 	int rn_div = pow(2,20); 	
 	std::uniform_int_distribution<int> urd(0, rn_div);	
-	std::mt19937 rng(rd());	
 	int N = lat.size();
 	angle_lattice new_lat(N);
 	double sqrtdt = sqrt(dt);
