@@ -7,9 +7,7 @@
 /*
  * Physical variables object
  */
-class parameters {																																															friend angle_lattice update_lattice(const angle_lattice&, parameters&, double);                                                   
-	friend angle_lattice update_even(const angle_lattice&, parameters&, double);
-	friend angle_lattice update_odd(const angle_lattice&, parameters&, double);
+class parameters {																																														                                                
 	private:				        
 		const static int rn_div = pow(2,20);
 		const double Dx;                                                                                            
@@ -25,11 +23,16 @@ class parameters {																																															friend angle_la
 		parameters(double dx, double dy, double lx, double ly, double cl) : Dx(dx), Dy(dy), Lx(lx), Ly(ly), Cl(cl)
 		, rng(rd()), urd(std::uniform_int_distribution<int>(0, rn_div)) {}        
 		double random_real();	
+		double get_cL() const;
+		double get_Dx() const;
+		double get_Dy() const;
+		double get_Lx() const;
+		double get_Ly() const;
 };                                                                                                             
 
-angle_lattice update_lattice(const angle_lattice&, parameters&, double);
-angle_lattice update_even(const angle_lattice&, parameters&, double);
-angle_lattice update_odd(const angle_lattice&, parameters&, double);
+angle_lattice update_lattice(const angle_lattice&, const parameters&, double);
+angle_lattice update_even(const angle_lattice&, const parameters&, double);
+angle_lattice update_odd(const angle_lattice&, const parameters&, double);
 
 double sin_points(const angle_lattice&, int, int, int, int); //sin of difference of two points 
 double cos_points(const angle_lattice&, int, int, int, int); //cos of difference of two points
