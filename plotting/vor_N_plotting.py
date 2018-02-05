@@ -12,10 +12,9 @@ cL_vor = []
 
 
 
-files = glob.glob("../vortices/N=64/dt=0.01/Lx=0Ly=0/N_64num_sim_20cL*")
+files = glob.glob("../final_vortices/N_16/dt_0.01/Lx_0Ly_0/*")
 for path_file in files:
     file_name = os.path.split(path_file)[1]
-    print file_name
     cL = float(re.findall(r"\d+\.\d+|\d+", file_name)[2])
     graph = PF.graph_points(path_file)
     num_vor = float(graph[-1][1])

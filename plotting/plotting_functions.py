@@ -2,11 +2,28 @@ import math
 
 def graph_points(file_name):
     graph = []
-    with open(file_name,'r') as file:                         
-        for line in file.readlines():
+    with open(file_name,'r') as doc:                         
+        for line in doc.readlines():
             l = line.strip().split(' ')
             graph.append([float(l[0]), float(l[1])])
     return graph 
+
+def write_file(file_name, data):
+    with open(file_name,'w') as doc:
+        for l in data:
+            doc.write(str(l[0]))
+            doc.write(' ')
+            doc.write(str(l[1]))
+            doc.write('\n')
+
+def append_file(file_name, data):
+    with open(file_name, 'a+') as doc:
+        for l in data:
+            print l 
+            doc.write(str(l[0]))                                                                             
+            doc.write(' ')                                                                                   
+            doc.write(str(l[1]))                                                                             
+            doc.write('\n')
 
 def normalise(f1, f2, graph):
     for point in graph:
@@ -19,9 +36,6 @@ def div_log(t):
 
 def log_div_log(t):
     return math.log(div_log(t))
-
-def iden(t):
-    return t
 
 def subset_graph(x1, x2, graph):
     subset = [[point[0], point[1]] for point in graph if                                                
@@ -37,5 +51,12 @@ def gr_n(graph, n):
     gr_n_graph = []
     for point in graph:
         if point[0] > n:
+            gr_n_graph.append(point)
+    return gr_n_graph
+
+def gr_n_2(graph, n):
+    gr_n_graph = []
+    for point in graph:
+        if point[1] > n:
             gr_n_graph.append(point)
     return gr_n_graph
