@@ -11,12 +11,12 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
         /tikz/.cd
     },
 		title={Number of vortices for $N$=16, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
@@ -34,12 +34,12 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
         /tikz/.cd
     },
 		title={Number of vortices for $N$=32, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
@@ -58,12 +58,12 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
         /tikz/.cd
     },
 		title={Number of vortices for $N$=32, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
@@ -81,12 +81,12 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
         /tikz/.cd
     },
 		title={Number of vortices for $N$=32, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.4.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
@@ -104,12 +104,12 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
         /tikz/.cd
     },
 		title={Number of vortices for $N$=40, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
@@ -128,12 +128,12 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
         /tikz/.cd
     },
 		title={Number of vortices for $N$=24, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
@@ -151,18 +151,18 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
         /tikz/.cd
     },
-		title={Number of vortices for $N$=48, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2.},
+		title={Number of vortices for $N$=48, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[only marks] 
-	table{../nv_run/N_48/dt_0.01/Lx_0.4Ly_0.4/N_48cL_0.2iter_180000.txt};
+	table{../nv_run/N_48/dt_0.01/Lx_0.4Ly_-0.4/N_48cL_0.2iter_180000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -174,18 +174,18 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
         /tikz/.cd
     },
-		title={Number of vortices for $N$=48, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2.},
+		title={Number of vortices for $N$=48, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[only marks] 
-	table{../nv_run/N_48/dt_0.01/Lx_0Ly_0/N_48cL_0.2iter_180000.txt};
+	table{../nv_run/N_48/dt_0.01/Lx_0.4Ly_0.4/N_48cL_0.2iter_180000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -198,12 +198,35 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
+        /tikz/.cd
+    },
+		title={Number of vortices for $N$=48, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2.},
+		xlabel={Number of runs},
+		ylabel={Number of vortices snapshot 10},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[only marks] 
+	table{../nv_run/N_48/dt_0.01/Lx_0Ly_0/N_48cL_0.2iter_180000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+\begin{tikzpicture}
+	\begin{axis}[
+y tick label style={
+        /pgf/number format/.cd,
+            fixed,
+            fixed zerofill,
+            precision=4,
         /tikz/.cd
     },
 		title={Number of vortices for $N$=48, $\lambda_x$= 0.2, $\lambda_y$=-0.2, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
@@ -221,41 +244,18 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
         /tikz/.cd
     },
 		title={Number of vortices for $N$=64, $\lambda_x$= 0.6, $\lambda_y$=0.6, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[only marks] 
 	table{../nv_run/N_64/dt_0.01/Lx_0.6Ly_0.6/N_64cL_0.2iter_320000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-\begin{tikzpicture}
-	\begin{axis}[
-y tick label style={
-        /pgf/number format/.cd,
-            fixed,
-            fixed zerofill,
-            precision=3,
-        /tikz/.cd
-    },
-		title={Number of vortices for $N$=64, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2.},
-		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[only marks] 
-	table{../nv_run/N_64/dt_0.01/Lx_0.4Ly_-0.4/N_64cL_0.2iter_320000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -268,18 +268,18 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
         /tikz/.cd
     },
-		title={Number of vortices for $N$=64, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2.},
+		title={Number of vortices for $N$=64, $\lambda_x$= 0.8, $\lambda_y$=-0.8, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[only marks] 
-	table{../nv_run/N_64/dt_0.01/Lx_0.4Ly_0.4/N_64cL_0.2iter_320000.txt};
+	table{../nv_run/N_64/dt_0.01/Lx_0.8Ly_-0.8/N_64cL_0.2iter_320000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -291,12 +291,59 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
+        /tikz/.cd
+    },
+		title={Number of vortices for $N$=64, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2.},
+		xlabel={Number of runs},
+		ylabel={Number of vortices snapshot 10},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[only marks] 
+	table{../nv_run/N_64/dt_0.01/Lx_0.4Ly_-0.4/N_64cL_0.2iter_320000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+\begin{tikzpicture}
+	\begin{axis}[
+y tick label style={
+        /pgf/number format/.cd,
+            fixed,
+            fixed zerofill,
+            precision=4,
+        /tikz/.cd
+    },
+		title={Number of vortices for $N$=64, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2.},
+		xlabel={Number of runs},
+		ylabel={Number of vortices snapshot 10},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[only marks] 
+	table{../nv_run/N_64/dt_0.01/Lx_0.4Ly_0.4/N_64cL_0.2iter_320000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+\begin{tikzpicture}
+	\begin{axis}[
+y tick label style={
+        /pgf/number format/.cd,
+            fixed,
+            fixed zerofill,
+            precision=4,
         /tikz/.cd
     },
 		title={Number of vortices for $N$=64, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
@@ -314,12 +361,35 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
+        /tikz/.cd
+    },
+		title={Number of vortices for $N$=64, $\lambda_x$= 0.6, $\lambda_y$=-0.6, $c_L$=0.2.},
+		xlabel={Number of runs},
+		ylabel={Number of vortices snapshot 10},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[only marks] 
+	table{../nv_run/N_64/dt_0.01/Lx_0.6Ly_-0.6/N_64cL_0.2iter_320000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+\begin{tikzpicture}
+	\begin{axis}[
+y tick label style={
+        /pgf/number format/.cd,
+            fixed,
+            fixed zerofill,
+            precision=4,
         /tikz/.cd
     },
 		title={Number of vortices for $N$=64, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
@@ -338,12 +408,12 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
         /tikz/.cd
     },
 		title={Number of vortices for $N$=64, $\lambda_x$= 0.2, $\lambda_y$=-0.2, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
@@ -361,18 +431,18 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
         /tikz/.cd
     },
-		title={Number of vortices for $N$=64, $\lambda_x$= 1, $\lambda_y$=1, $c_L$=0.2.},
+		title={Number of vortices for $N$=64, $\lambda_x$= 0.8, $\lambda_y$=0.8, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[only marks] 
-	table{../nv_run/N_64/dt_0.01/Lx_1Ly_1/N_64cL_0.2iter_320000.txt};
+	table{../nv_run/N_64/dt_0.01/Lx_0.8Ly_0.8/N_64cL_0.2iter_320000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -384,18 +454,18 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
         /tikz/.cd
     },
-		title={Number of vortices for $N$=128, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2.},
+		title={Number of vortices for $N$=64, $\lambda_x$= 1, $\lambda_y$=1, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[only marks] 
-	table{../nv_run/N_128/dt_0.01/Lx_0.4Ly_-0.4/N_128cL_0.2iter_1280000.txt};
+	table{../nv_run/N_64/dt_0.01/Lx_1Ly_1/N_64cL_0.2iter_320000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -408,12 +478,35 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
+        /tikz/.cd
+    },
+		title={Number of vortices for $N$=128, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2.},
+		xlabel={Number of runs},
+		ylabel={Number of vortices snapshot 10},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[only marks] 
+	table{../nv_run/N_128/dt_0.01/Lx_0.4Ly_-0.4/N_128cL_0.2iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+\begin{tikzpicture}
+	\begin{axis}[
+y tick label style={
+        /pgf/number format/.cd,
+            fixed,
+            fixed zerofill,
+            precision=4,
         /tikz/.cd
     },
 		title={Number of vortices for $N$=128, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
@@ -431,41 +524,18 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
         /tikz/.cd
     },
 		title={Number of vortices for $N$=128, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.4.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[only marks] 
 	table{../nv_run/N_128/dt_0.01/Lx_0.4Ly_0.4/N_128cL_0.4iter_1280000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-\begin{tikzpicture}
-	\begin{axis}[
-y tick label style={
-        /pgf/number format/.cd,
-            fixed,
-            fixed zerofill,
-            precision=3,
-        /tikz/.cd
-    },
-		title={Number of vortices for $N$=128, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2.},
-		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[only marks] 
-	table{../nv_run/N_128/dt_0.01/Lx_0.2Ly_0.2/N_128cL_0.2iter_1280000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -478,12 +548,35 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
+        /tikz/.cd
+    },
+		title={Number of vortices for $N$=128, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2.},
+		xlabel={Number of runs},
+		ylabel={Number of vortices snapshot 10},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[only marks] 
+	table{../nv_run/N_128/dt_0.01/Lx_0.2Ly_0.2/N_128cL_0.2iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+\begin{tikzpicture}
+	\begin{axis}[
+y tick label style={
+        /pgf/number format/.cd,
+            fixed,
+            fixed zerofill,
+            precision=4,
         /tikz/.cd
     },
 		title={Number of vortices for $N$=128, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.4.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
@@ -501,12 +594,36 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
+        /tikz/.cd
+    },
+		title={Number of vortices for $N$=128, $\lambda_x$= 0.6, $\lambda_y$=-0.6, $c_L$=0.2.},
+		xlabel={Number of runs},
+		ylabel={Number of vortices snapshot 10},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[only marks] 
+	table{../nv_run/N_128/dt_0.01/Lx_0.6Ly_-0.6/N_128cL_0.2iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+\begin{tikzpicture}
+	\begin{axis}[
+y tick label style={
+        /pgf/number format/.cd,
+            fixed,
+            fixed zerofill,
+            precision=4,
         /tikz/.cd
     },
 		title={Number of vortices for $N$=128, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
@@ -524,18 +641,41 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
         /tikz/.cd
     },
 		title={Number of vortices for $N$=128, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.4.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[only marks] 
 	table{../nv_run/N_128/dt_0.01/Lx_0Ly_0/N_128cL_0.4iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+\begin{tikzpicture}
+	\begin{axis}[
+y tick label style={
+        /pgf/number format/.cd,
+            fixed,
+            fixed zerofill,
+            precision=4,
+        /tikz/.cd
+    },
+		title={Number of vortices for $N$=128, $\lambda_x$= 0.2, $\lambda_y$=-0.2, $c_L$=0.2.},
+		xlabel={Number of runs},
+		ylabel={Number of vortices snapshot 10},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[only marks] 
+	table{../nv_run/N_128/dt_0.01/Lx_0.2Ly_-0.2/N_128cL_0.2iter_1280000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -548,18 +688,18 @@ y tick label style={
         /pgf/number format/.cd,
             fixed,
             fixed zerofill,
-            precision=3,
+            precision=4,
         /tikz/.cd
     },
-		title={Number of vortices for $N$=128, $\lambda_x$= 0.2, $\lambda_y$=-0.2, $c_L$=0.2.},
+		title={Number of vortices for $N$=128, $\lambda_x$= 0.8, $\lambda_y$=0.8, $c_L$=0.2.},
 		xlabel={Number of runs},
-		ylabel={Binder cumulant at snapshot 100},
+		ylabel={Number of vortices snapshot 10},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[only marks] 
-	table{../nv_run/N_128/dt_0.01/Lx_0.2Ly_-0.2/N_128cL_0.2iter_1280000.txt};
+	table{../nv_run/N_128/dt_0.01/Lx_0.8Ly_0.8/N_128cL_0.2iter_1280000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}

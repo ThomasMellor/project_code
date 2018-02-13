@@ -88,16 +88,26 @@ PF.split_graph(times, binder, graph)
 #plt.plot(times, binder,label='N=48, nonlinera')  
 
 i=128                                                                                                          
-graph = PF.graph_points("../final_binder_cumulant/N_128/dt_0.01/Lx_0Ly_0/N_128num_sim_200cL_0.4iter_1280000.txt")                                                            
+graph = PF.graph_points("../final_binder_cumulant/N_128/dt_0.01/Lx_0Ly_0/N_128num_sim_200cL_0.4iter_1280000.txt")                                                    
 graph = PF.gr_n(graph, 1)                                                                                     
 graph = PF.normalise(lambda t : PF.div_log(t)/(i**2), lambda x : x, graph)                                    
 times = []                                                                                                    
 binder = []                                                                                                   
 PF.split_graph(times, binder, graph)                                                                          
-#plt.plot(times, binder, label ='N=128') 
+plt.plot(times, binder, label ='N=128, 300') 
+
+i=128                                                                                                          
+graph = PF.graph_points("../final_binder_cumulant/N_128/dt_0.01/Lx_0Ly_0/N_128num_sim_150cL_0.4iter_1280000.txt")                                                    
+graph = PF.gr_n(graph, 1)                                                                                     
+graph = PF.normalise(lambda t : PF.div_log(t)/(i**2), lambda x : x, graph)                                    
+times = []                                                                                                    
+binder = []                                                                                                   
+PF.split_graph(times, binder, graph)                                                                          
+plt.plot(times, binder, label ='N=128') 
+
 
 i=64                                                                                                          
-graph = PF.graph_points("../final_binder_cumulant/N_64/dt_0.01/Lx_0Ly_0/N_64num_sim_400cL_0.2iter_320000.txt")                                                     
+graph = PF.graph_points("../final_binder_cumulant/N_64/dt_0.01/Lx_0Ly_0/N_64num_sim_200cL_0.4iter_320000.txt")                                                
 graph = PF.gr_n(graph, 1)                                                                                     
 graph = PF.normalise(lambda t : PF.div_log(t)/(i**2), lambda x : x, graph)                                    
 times = []                                                                                                    
@@ -106,32 +116,15 @@ PF.split_graph(times, binder, graph)
 #plt.plot(times, binder, label='N=64, linear') 
 
 i=64                                                                                                          
-graph = PF.graph_points("../final_binder_cumulant/N_64/dt_0.01/Lx_1Ly_1/N_64num_sim_300cL_0.2iter_320000.txt")
+graph = PF.graph_points("../final_binder_cumulant/N_64/dt_0.01/Lx_0Ly_0/N_64num_sim_400cL_0.4iter_320000.txt")                                                
 graph = PF.gr_n(graph, 1)                                                                                     
 graph = PF.normalise(lambda t : PF.div_log(t)/(i**2), lambda x : x, graph)                                    
 times = []                                                                                                    
 binder = []                                                                                                   
 PF.split_graph(times, binder, graph)                                                                          
-plt.title('Binder collapse, linear')
-plt.plot(times, binder, label= 'N=64, nonlinear') 
+#plt.plot(times, binder, label='N=64, linear, 400') 
 
-i=32                                                                                                          
-graph = PF.graph_points("../final_binder_cumulant/N_32/dt_0.01/Lx_0Ly_0/N_32num_sim_100cL_0iter_80000third.txt")         
-graph = PF.gr_n(graph, 1)                                                                                     
-graph = PF.normalise(lambda t : PF.div_log(t)/(i**2), lambda x : x, graph)                                    
-times = []                                                                                                    
-binder = []                                                                                                   
-PF.split_graph(times, binder, graph)                                                                          
-#plt.plot(times, binder,label='N=32, cL=0')   
 
-i=32                                                                                                          
-graph = PF.graph_points("../final_binder_cumulant/N_32/dt_0.01/Lx_0Ly_0/N_32num_sim_100cL_0.1iter_80000third.txt")    
-graph = PF.gr_n(graph, 1)                                                                                     
-graph = PF.normalise(lambda t : PF.div_log(t)/(i**2), lambda x : x, graph)                                    
-times = []                                                                                                    
-binder = []                                                                                                   
-PF.split_graph(times, binder, graph)                                                                          
-#plt.plot(times, binder,label='N=32,cL = 0.1')
 
 i=32                                                                                                          
 graph = PF.graph_points("../final_binder_cumulant/N_32/dt_0.01/Lx_0Ly_0/N_32num_sim_500cL_0.4iter_80000.txt")    
@@ -143,32 +136,6 @@ PF.split_graph(times, binder, graph)
 #plt.plot(times, binder,label='N=32, cL=0.2')
 
 
-i=32                                                                                                          
-graph = PF.graph_points("../final_binder_cumulant/N_32/dt_0.01/Lx_0Ly_0/N_32num_sim_100cL_0.4iter_80000third.txt")
-graph = PF.gr_n(graph, 1)                                                                                     
-graph = PF.normalise(lambda t : PF.div_log(t)/(i**2), lambda x : x, graph)                                    
-times = []                                                                                                    
-binder = []                                                                                                   
-PF.split_graph(times, binder, graph)                                                                          
-#plt.plot(times, binder,label='N=32, cL=0.4') 
-
-i=32                                                                                                          
-graph = PF.graph_points("../final_binder_cumulant/N_32/dt_0.01/Lx_0Ly_0/N_32num_sim_100cL_0.6iter_80000third.txt")
-graph = PF.gr_n(graph, 1)                                                                                     
-graph = PF.normalise(lambda t : PF.div_log(t)/(i**2), lambda x : x, graph)                                    
-times = []                                                                                                    
-binder = []                                                                                                   
-PF.split_graph(times, binder, graph)                                                                          
-#plt.plot(times, binder,label='N=32, cL=0.6')
-
-i=32                                                                                                          
-graph = PF.graph_points("../final_binder_cumulant/N_32/dt_0.01/Lx_0Ly_0/mag_2N_32num_sim_100cL_0.1iter_80000third.txt")
-graph = PF.gr_n(graph, 1)                                                                                     
-graph = PF.normalise(lambda t : PF.div_log(t)/(i**2), lambda x : x, graph)                                    
-times = []                                                                                                    
-binder = []                                                                                                   
-PF.split_graph(times, binder, graph)                                                                          
-#plt.plot(times, binder,label='N=32, cL=0.8') 
 
 
 i=16                                                                                                          

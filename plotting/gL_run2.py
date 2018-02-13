@@ -6,7 +6,7 @@ import operator
 import fnmatch 
 
 matches = []
-for root, dirnames, filenames in os.walk('../final_vortices'):
+for root, dirnames, filenames in os.walk('../final_binder_cumulant'):
     for filename in fnmatch.filter(filenames, '*.txt'):
         matches.append(os.path.join(root, filename))
 
@@ -28,13 +28,14 @@ for path_file in matches:
     print run
     print cL
     print itera
-    directory = "../nv_run/N_" + N + "/dt_0.01/Lx_" + Lx + "Ly_" + Ly 
+    directory = "../gL_run_second/N_" + N + "/dt_0.01/Lx_" + Lx + "Ly_" + Ly 
     print directory 
     if not os.path.exists(directory):
         os.makedirs(directory)
     graph = PF.graph_points(path_file)    
-    for value in graph:                                                                                       
-        if (value[0] == 10*pow(float(N)/16,2)):                                                              
+    for value in graph:
+        if (value[0] == 160*pow(float(N)/16,2)):
             point = [[run,value[1]]]
+    
     path=directory+ "/N_" + N  + "cL_" + cL + "iter_" +itera + ".txt"
     PF.append_file(path, point)
