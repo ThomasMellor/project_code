@@ -6,11 +6,11 @@ import operator
 import fnmatch 
 
 matches = []
-for root, dirnames, filenames in os.walk('../nv_run'):
+for root, dirnames, filenames in os.walk('../nv_run_second'):
     for filename in fnmatch.filter(filenames, '*.txt'):
         matches.append(os.path.join(root, filename))
 counter=0
-with open('../tex_files/nv_run.tex','w') as main_file:
+with open('../tex_files/nv_run_second.tex','w') as main_file:
     with open('../tex_files/preamble.tex','r') as preable:
         for line in preable:
             main_file.write(line)
@@ -35,7 +35,7 @@ with open('../tex_files/nv_run.tex','w') as main_file:
         itera=result[6]
         title = '\t\ttitle={Number of vortices for $N$=' + N + ', $\\lambda_x$= ' + Lx + ', $\\lambda_y$=' + Ly + ', $c_L$=' + cL  +'.},\n' 
         main_file.write(title)
-        with open('../tex_files/body_run_nv.tex', 'r') as body:
+        with open('../tex_files/body_run2_nv.tex', 'r') as body:
             for line in body:
                 main_file.write(line)
         table='\ttable{' + path_file + '};\n'

@@ -34,7 +34,7 @@ for path_file in matches:
         os.makedirs(directory)
     graph = PF.graph_points(path_file)    
     for value in graph:                                                                                       
-        if (value[0] == 10*pow(float(N)/16,2)):                                                              
+        if (value[0] == 16*pow(float(N)/16,2)):                                                              Ow
             point = [[run,value[1]]]
     path=directory+ "/N_" + N  + "cL_" + cL + "iter_" +itera + ".txt"
     PF.append_file(path, point)

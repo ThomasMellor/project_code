@@ -23,7 +23,7 @@ with open('../tex_files/nv_log_tex.tex','w') as main_file:
         with open('../tex_files/begin.tex','r') as begin:
             for line in begin:
                 main_file.write(line)
-        result = re.findall(r"-?\d+\.\d+|\d+", path_file)
+        result = re.findall(r"-?\d+\.\d+|-?\d+", path_file)
         print path_file
         N=result[0]
         Lx=result[2]
@@ -31,7 +31,10 @@ with open('../tex_files/nv_log_tex.tex','w') as main_file:
         run=result[5]
         cL=result[6]
         itera=result[7]
-        title = '\t\ttitle={$\log n_v$ for $N$=' + N + ', $\\lambda_x$= ' + Lx + ', $\\lambda_y$=' + Ly + ', $c_L$=' + cL + ', ' + run + ' runs.},\n' 
+        
+        exp=result[8]
+        
+        title = '\t\ttitle={$\log n_v$ for $N$=' + N + ', $\\lambda_x$= ' + Lx + ', $\\lambda_y$=' + Ly + ', $c_L$=' + cL + ', ' + run + ' runs' + ', exponent '+ exp+ '.},\n' 
         main_file.write(title)
         with open('../tex_files/body_nv.tex', 'r') as body:
             for line in body:

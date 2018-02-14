@@ -26,7 +26,7 @@ with open('../tex_files/gL_run.tex','w') as main_file:
         with open('../tex_files/precision.tex','r') as precision:
             for line in precision:
                 main_file.write(line)
-        result = re.findall(r"-?\d+\.\d+|\d+", path_file)
+        result = re.findall(r"-?\d+\.\d+|-?\d+", path_file)
         print path_file
         N=result[0]
         Lx=result[2]

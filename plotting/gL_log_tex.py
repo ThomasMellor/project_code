@@ -23,7 +23,7 @@ with open('../tex_files/gL_log.tex','w') as main_file:
         with open('../tex_files/begin.tex','r') as begin:
             for line in begin:
                 main_file.write(line)
-        result = re.findall(r"-?\d+\.\d+|\d+", path_file)
+        result = re.findall(r"-?\d+\.\d+|-?\d+", path_file)
         print path_file
         N=result[0]
         Lx=result[2]
@@ -33,7 +33,7 @@ with open('../tex_files/gL_log.tex','w') as main_file:
         itera=result[7]
         title = '\t\ttitle={Binder cumulant for $N$=' + N + ', $\\lambda_x$= ' + Lx + ', $\\lambda_y$=' + Ly + ', $c_L$=' + cL + ', ' + run + ' runs.},\n' 
         main_file.write(title)
-        with open('../tex_files/body.tex', 'r') as body:
+        with open('../tex_files/body_log.tex', 'r') as body:
             for line in body:
                 main_file.write(line)
         table='\ttable{' + path_file + '};\n'
