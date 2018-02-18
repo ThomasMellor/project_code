@@ -84,7 +84,7 @@ with open('../tex_files/gL.tex','w') as main_file:
                     with open('../tex_files/body_t.tex', 'r') as body:
                         for line in body:
                             main_file.write(line) 
-            add_plot =  '\t\t\\addplot[mark=none, color= ' + colours[int(N)] + ']\n'
+            add_plot =  '\t\t\\addplot[mark=none, color= ' + colours[int(N)] +']\n'
             main_file.write(add_plot)
             table='\ttable{' + path_file + '};\n'
             main_file.write(table)
