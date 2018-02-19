@@ -6,14 +6,14 @@ import operator
 import fnmatch 
 
 matches = []
-for root, dirnames, filenames in os.walk('../final_binder_cumulant'):
+for root, dirnames, filenames in os.walk('../nv_log'):
     for filename in fnmatch.filter(filenames, '*.txt'):
         matches.append(os.path.join(root, filename))
 counter=0
 
-lam = [[0,0],[0.2,0.2],[0.2,-0.2],[0.4,0.4],[0.4,-0.4],[0.6,-0.6],[0.6,0.6],[0.8,0.8],[0.8,-0.8],[1,1],[1,-1]]
+lam = [[0,0],[0.2,0.2],[0.4,0.4],[0.6,0.6],[0.8,0.8],[1,1],]
 
-colours = {40: 'red', 64: 'blue', 48: 'green', 128: 'orange'}
+colours = {0: 'red', 0.2: 'blue', 0.4: 'green', 0.6: 'orange',0.8: 'gray', 1: 'black'}
 sizes = [40,48, 64, 128]
 dic = dict() 
 for path_file in matches:
@@ -33,38 +33,35 @@ for path_file in matches:
 
 size_bool = False 
 
-for item in matches:
-    print item 
-for lambdas in lam:
-    print lambdas
 
-with open('../tex_files/gL.tex','w') as main_file:
+with open('../tex_files/nv_overlaid.tex','w') as main_file:
     with open('../tex_files/preamble.tex','r') as preable:
         for line in preable:
             main_file.write(line)
-    prev_lam = 0
-    for lambdas in lam:
+    prev_size = -1
+    for size in sizes:
         for path_file in matches:
             result = re.findall(r"-?\d+\.\d+|-?\d+", path_file)
             if( int(result[4]) == 2 or int(result[4]) == 4):
                 continue 
             N=result[0]
-            if int(N) not in sizes:
+            if int(N) !=  size:
                 continue
             Lx=result[2]
             Ly=result[3]
-            if float(Lx) != lambdas[0] or float(Ly) != lambdas[1]:
+            if [float(Lx), float(Ly)] not in lam:
                 continue
             run=result[5]
             cL=result[6]
             if float(cL)!= 0.2:
                 continue
             itera=result[7]
+            exp=result[8]
             key = N + ',' + Lx + ',' + Ly + ',' + cL + ',' + itera
             if dic[key] != int(run):
                 continue
             
-            if(prev_lam != lambdas):
+            if(prev_size != size):
                 if(size_bool == True):
                     with open('../tex_files/end.tex','r') as end:
                         for line in end:
@@ -79,18 +76,18 @@ with open('../tex_files/gL.tex','w') as main_file:
                 with open('../tex_files/begin.tex','r') as begin:
                     for line in begin:
                         main_file.write(line) 
-                    title = '\t\ttitle={Binder cumulant for $\\lambda_x$= ' + Lx + ', $\\lambda_y$=' + Ly + ', $c_L$=' + cL + '.},\n' 
+                    title = '\t\ttitle={Vortices  for  N = $' + N + '$.},\n' 
                     main_file.write(title)
                     with open('../tex_files/body_t.tex', 'r') as body:
                         for line in body:
                             main_file.write(line) 
-            add_plot =  '\t\t\\addplot[mark=none, color= ' + colours[int(N)] + ']\n'
+            add_plot =  '\t\t\\addplot[mark=none, color= ' + colours[float(Lx)] +']\n'
             main_file.write(add_plot)
             table='\ttable{' + path_file + '};\n'
             main_file.write(table)
-            legend = '\\addlegendentry{$N$=' + N + ', ' + run + ' runs.}\n'  
+            legend = '\\addlegendentry{$N$=' + N + ', $\lambda_x = $' + Lx + ', exponent =' + exp + '}\n'  
             main_file.write(legend)
-            prev_lam = lambdas 
+            prev_size = size 
     with open('../tex_files/end.tex','r') as end:
         for line in end:
             main_file.write(line)

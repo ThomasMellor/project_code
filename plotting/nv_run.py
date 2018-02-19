@@ -12,7 +12,7 @@ for root, dirnames, filenames in os.walk('../final_vortices'):
 
 for path_file in matches:
     #file_name = os.path.split(path_file)[0]
-    result = re.findall(r"-?\d+\.\d+|\d+", path_file)
+    result = re.findall(r"-?\d+\.\d+|-?\d+", path_file)
     if( int(result[4]) == 2 or int(result[4]) == 4):
         continue 
     print path_file
