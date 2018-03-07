@@ -14,7 +14,7 @@ counter=0
 lam = [[0,0],[0.2,0.2],[0.4,0.4],[0.6,0.6],[0.8,0.8],[1,1],]
 
 colours = {0: 'red', 0.2: 'blue', 0.4: 'green', 0.6: 'orange',0.8: 'gray', 1: 'black'}
-sizes = [40,48, 64, 128]
+sizes = [40,48, 64, 128, 104, 72]
 dic = dict() 
 for path_file in matches:
     result = re.findall(r"-?\d+\.\d+|-?\d+", path_file)
@@ -32,7 +32,8 @@ for path_file in matches:
             dic[key] = int(run)
 
 size_bool = False 
-
+for i in matches:
+    print i
 
 with open('../tex_files/nv_overlaid.tex','w') as main_file:
     with open('../tex_files/preamble.tex','r') as preable:
@@ -85,7 +86,7 @@ with open('../tex_files/nv_overlaid.tex','w') as main_file:
             main_file.write(add_plot)
             table='\ttable{' + path_file + '};\n'
             main_file.write(table)
-            legend = '\\addlegendentry{$N$=' + N + ', $\lambda_x = $' + Lx + ', exponent =' + exp + '}\n'  
+            legend = '\\addlegendentry{$N$=' + N + ', $\lambda_x = $' + Lx + ', exponent =' + exp + ', runs = ' + runs +' }\n'  
             main_file.write(legend)
             prev_size = size 
     with open('../tex_files/end.tex','r') as end:

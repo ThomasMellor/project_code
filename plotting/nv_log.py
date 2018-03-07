@@ -16,6 +16,7 @@ def main():
     
     dic = dict() 
     for path_file in matches:
+        print path_file
         result = re.findall(r"-?\d+\.\d+|-?\d+", path_file)
         N=result[0]
         Lx=result[2]
@@ -29,8 +30,7 @@ def main():
         if key in dic:
             if int(run) > dic[key]:
                 dic[key] = int(run) 
-    
-    print dic
+
 
     for path_file in matches:
         #file_name = os.path.split(path_file)[0]
@@ -45,13 +45,6 @@ def main():
         key = N + ',' + Lx + ',' + Ly + ',' + cL + ',' + itera
         if dic[key] != int(run):
             continue
-        print key
-        print N
-        print Lx
-        print Ly
-        print run
-        print cL
-        print itera
         size = int(N)
         
         if size  == 16: 
@@ -68,6 +61,12 @@ def main():
             linear_x = [2,3]
         elif size == 128:
             linear_x = [3.5,5]
+        elif size == 104:
+            linear_x = [3.5,5]
+        elif size == 72:
+            linear_x = [2,3] 
+        elif size == 80:
+            linear_x = [2,3]
         directory = "../nv_log/N_" + N + "/dt_0.01/Lx_" + Lx + "Ly_" + Ly 
         if not os.path.exists(directory):
             os.makedirs(directory)

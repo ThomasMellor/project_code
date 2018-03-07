@@ -12,7 +12,7 @@ for root, dirnames, filenames in os.walk('../final_vortices'):
 
 for path_file in matches:
     #file_name = os.path.split(path_file)[0]
-    result = re.findall(r"-?\d+\.\d+|\d+", path_file)
+    result = re.findall(r"-?\d+\.\d+|-?\d+", path_file)
     if( int(result[4]) == 2 or int(result[4]) == 4):
         continue 
     print path_file
@@ -28,13 +28,13 @@ for path_file in matches:
     print run
     print cL
     print itera
-    directory = "../nv_run/N_" + N + "/dt_0.01/Lx_" + Lx + "Ly_" + Ly 
+    directory = "../nv_run_second/N_" + N + "/dt_0.01/Lx_" + Lx + "Ly_" + Ly 
     print directory 
     if not os.path.exists(directory):
         os.makedirs(directory)
     graph = PF.graph_points(path_file)    
     for value in graph:                                                                                       
-        if (value[0] == 16*pow(float(N)/16,2)):                                                              Ow
+        if (value[0] == 16*pow(float(N)/16,2)):                                                              
             point = [[run,value[1]]]
     path=directory+ "/N_" + N  + "cL_" + cL + "iter_" +itera + ".txt"
     PF.append_file(path, point)

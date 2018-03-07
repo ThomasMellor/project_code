@@ -5,8 +5,8 @@ from scipy.optimize import curve_fit
 import plotting_functions as PF
 
 def main():
-    linear_x = [1.5, 2]
-    graph = PF.graph_points("../final_vortices/N_24/dt_0.01/Lx_0Ly_0/N_24num_sim_1000cL_0.2iter_45000.txt")
+    linear_x = [1.5, 3.5]
+    graph = PF.graph_points("../test_new_vortex_analysis/test1.txt")
     graph = PF.gr_n(graph, 1)
     graph = PF.gr_n_2(graph, 0) 
 

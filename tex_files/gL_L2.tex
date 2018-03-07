@@ -1,0 +1,361 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+\usepackage{pgfplots}
+%\pgfplotsset{compat=1.13}
+%\maxdeadcycles=200
+\begin{document}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2.},
+		xlabel=$\log(t)/L^2\log t)$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+		\addplot[mark=none, color= red]
+	table{../gL_log/N_40/dt_0.01/Lx_0Ly_0/N_40num_sim_300cL_0.2iter_125000.txt};
+\addlegendentry{$N$=40, 300 runs.}
+		\addplot[mark=none, color= green]
+	table{../gL_log/N_48/dt_0.01/Lx_0Ly_0/N_48num_sim_500cL_0.2iter_180000.txt};
+\addlegendentry{$N$=48, 500 runs.}
+		\addplot[mark=none, color= black]
+	table{../gL_log/N_104/dt_0.01/Lx_0Ly_0/N_104num_sim_250cL_0.2iter_845000.txt};
+\addlegendentry{$N$=104, 250 runs.}
+		\addplot[mark=none, color= blue]
+	table{../gL_log/N_64/dt_0.01/Lx_0Ly_0/N_64num_sim_500cL_0.2iter_320000.txt};
+\addlegendentry{$N$=64, 500 runs.}
+		\addplot[mark=none, color= orange]
+	table{../gL_log/N_128/dt_0.01/Lx_0Ly_0/N_128num_sim_420cL_0.2iter_1280000.txt};
+\addlegendentry{$N$=128, 420 runs.}
+		\addplot[mark=none, color= gray]
+	table{../gL_log/N_72/dt_0.01/Lx_0Ly_0/N_72num_sim_250cL_0.2iter_405000.txt};
+\addlegendentry{$N$=72, 250 runs.}
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2.},
+		xlabel=$\log(t)/L^2\log t)$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+		\addplot[mark=none, color= red]
+	table{../gL_log/N_40/dt_0.01/Lx_0.2Ly_0.2/N_40num_sim_300cL_0.2iter_125000.txt};
+\addlegendentry{$N$=40, 300 runs.}
+		\addplot[mark=none, color= green]
+	table{../gL_log/N_48/dt_0.01/Lx_0.2Ly_0.2/N_48num_sim_500cL_0.2iter_180000.txt};
+\addlegendentry{$N$=48, 500 runs.}
+		\addplot[mark=none, color= black]
+	table{../gL_log/N_104/dt_0.01/Lx_0.2Ly_0.2/N_104num_sim_125cL_0.2iter_845000.txt};
+\addlegendentry{$N$=104, 125 runs.}
+		\addplot[mark=none, color= blue]
+	table{../gL_log/N_64/dt_0.01/Lx_0.2Ly_0.2/N_64num_sim_500cL_0.2iter_320000.txt};
+\addlegendentry{$N$=64, 500 runs.}
+		\addplot[mark=none, color= orange]
+	table{../gL_log/N_128/dt_0.01/Lx_0.2Ly_0.2/N_128num_sim_375cL_0.2iter_1280000.txt};
+\addlegendentry{$N$=128, 375 runs.}
+		\addplot[mark=none, color= gray]
+	table{../gL_log/N_72/dt_0.01/Lx_0.2Ly_0.2/N_72num_sim_200cL_0.2iter_405000.txt};
+\addlegendentry{$N$=72, 200 runs.}
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $\lambda_x$= 0.2, $\lambda_y$=-0.2, $c_L$=0.2.},
+		xlabel=$\log(t)/L^2\log t)$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+		\addplot[mark=none, color= red]
+	table{../gL_log/N_40/dt_0.01/Lx_0.2Ly_-0.2/N_40num_sim_300cL_0.2iter_125000.txt};
+\addlegendentry{$N$=40, 300 runs.}
+		\addplot[mark=none, color= green]
+	table{../gL_log/N_48/dt_0.01/Lx_0.2Ly_-0.2/N_48num_sim_300cL_0.2iter_180000.txt};
+\addlegendentry{$N$=48, 300 runs.}
+		\addplot[mark=none, color= black]
+	table{../gL_log/N_104/dt_0.01/Lx_0.2Ly_-0.2/N_104num_sim_250cL_0.2iter_845000.txt};
+\addlegendentry{$N$=104, 250 runs.}
+		\addplot[mark=none, color= blue]
+	table{../gL_log/N_64/dt_0.01/Lx_0.2Ly_-0.2/N_64num_sim_500cL_0.2iter_320000.txt};
+\addlegendentry{$N$=64, 500 runs.}
+		\addplot[mark=none, color= orange]
+	table{../gL_log/N_128/dt_0.01/Lx_0.2Ly_-0.2/N_128num_sim_250cL_0.2iter_1280000.txt};
+\addlegendentry{$N$=128, 250 runs.}
+		\addplot[mark=none, color= gray]
+	table{../gL_log/N_72/dt_0.01/Lx_0.2Ly_-0.2/N_72num_sim_200cL_0.2iter_405000.txt};
+\addlegendentry{$N$=72, 200 runs.}
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2.},
+		xlabel=$\log(t)/L^2\log t)$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+		\addplot[mark=none, color= red]
+	table{../gL_log/N_40/dt_0.01/Lx_0.4Ly_0.4/N_40num_sim_300cL_0.2iter_125000.txt};
+\addlegendentry{$N$=40, 300 runs.}
+		\addplot[mark=none, color= green]
+	table{../gL_log/N_48/dt_0.01/Lx_0.4Ly_0.4/N_48num_sim_600cL_0.2iter_180000.txt};
+\addlegendentry{$N$=48, 600 runs.}
+		\addplot[mark=none, color= black]
+	table{../gL_log/N_104/dt_0.01/Lx_0.4Ly_0.4/N_104num_sim_125cL_0.2iter_845000.txt};
+\addlegendentry{$N$=104, 125 runs.}
+		\addplot[mark=none, color= blue]
+	table{../gL_log/N_64/dt_0.01/Lx_0.4Ly_0.4/N_64num_sim_1500cL_0.2iter_320000.txt};
+\addlegendentry{$N$=64, 1500 runs.}
+		\addplot[mark=none, color= orange]
+	table{../gL_log/N_128/dt_0.01/Lx_0.4Ly_0.4/N_128num_sim_300cL_0.2iter_1280000.txt};
+\addlegendentry{$N$=128, 300 runs.}
+		\addplot[mark=none, color= gray]
+	table{../gL_log/N_72/dt_0.01/Lx_0.4Ly_0.4/N_72num_sim_200cL_0.2iter_405000.txt};
+\addlegendentry{$N$=72, 200 runs.}
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2.},
+		xlabel=$\log(t)/L^2\log t)$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+		\addplot[mark=none, color= red]
+	table{../gL_log/N_40/dt_0.01/Lx_0.4Ly_-0.4/N_40num_sim_300cL_0.2iter_125000.txt};
+\addlegendentry{$N$=40, 300 runs.}
+		\addplot[mark=none, color= green]
+	table{../gL_log/N_48/dt_0.01/Lx_0.4Ly_-0.4/N_48num_sim_300cL_0.2iter_180000.txt};
+\addlegendentry{$N$=48, 300 runs.}
+		\addplot[mark=none, color= black]
+	table{../gL_log/N_104/dt_0.01/Lx_0.4Ly_-0.4/N_104num_sim_125cL_0.2iter_845000.txt};
+\addlegendentry{$N$=104, 125 runs.}
+		\addplot[mark=none, color= blue]
+	table{../gL_log/N_64/dt_0.01/Lx_0.4Ly_-0.4/N_64num_sim_450cL_0.2iter_320000.txt};
+\addlegendentry{$N$=64, 450 runs.}
+		\addplot[mark=none, color= orange]
+	table{../gL_log/N_128/dt_0.01/Lx_0.4Ly_-0.4/N_128num_sim_190cL_0.2iter_1280000.txt};
+\addlegendentry{$N$=128, 190 runs.}
+		\addplot[mark=none, color= gray]
+	table{../gL_log/N_72/dt_0.01/Lx_0.4Ly_-0.4/N_72num_sim_200cL_0.2iter_405000.txt};
+\addlegendentry{$N$=72, 200 runs.}
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $\lambda_x$= 0.6, $\lambda_y$=-0.6, $c_L$=0.2.},
+		xlabel=$\log(t)/L^2\log t)$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+		\addplot[mark=none, color= red]
+	table{../gL_log/N_40/dt_0.01/Lx_0.6Ly_-0.6/N_40num_sim_300cL_0.2iter_125000.txt};
+\addlegendentry{$N$=40, 300 runs.}
+		\addplot[mark=none, color= green]
+	table{../gL_log/N_48/dt_0.01/Lx_0.6Ly_-0.6/N_48num_sim_300cL_0.2iter_180000.txt};
+\addlegendentry{$N$=48, 300 runs.}
+		\addplot[mark=none, color= black]
+	table{../gL_log/N_104/dt_0.01/Lx_0.6Ly_-0.6/N_104num_sim_125cL_0.2iter_845000.txt};
+\addlegendentry{$N$=104, 125 runs.}
+		\addplot[mark=none, color= blue]
+	table{../gL_log/N_64/dt_0.01/Lx_0.6Ly_-0.6/N_64num_sim_400cL_0.2iter_320000.txt};
+\addlegendentry{$N$=64, 400 runs.}
+		\addplot[mark=none, color= orange]
+	table{../gL_log/N_128/dt_0.01/Lx_0.6Ly_-0.6/N_128num_sim_170cL_0.2iter_1280000.txt};
+\addlegendentry{$N$=128, 170 runs.}
+		\addplot[mark=none, color= gray]
+	table{../gL_log/N_72/dt_0.01/Lx_0.6Ly_-0.6/N_72num_sim_250cL_0.2iter_405000.txt};
+\addlegendentry{$N$=72, 250 runs.}
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $\lambda_x$= 0.6, $\lambda_y$=0.6, $c_L$=0.2.},
+		xlabel=$\log(t)/L^2\log t)$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+		\addplot[mark=none, color= red]
+	table{../gL_log/N_40/dt_0.01/Lx_0.6Ly_0.6/N_40num_sim_300cL_0.2iter_125000.txt};
+\addlegendentry{$N$=40, 300 runs.}
+		\addplot[mark=none, color= green]
+	table{../gL_log/N_48/dt_0.01/Lx_0.6Ly_0.6/N_48num_sim_300cL_0.2iter_180000.txt};
+\addlegendentry{$N$=48, 300 runs.}
+		\addplot[mark=none, color= black]
+	table{../gL_log/N_104/dt_0.01/Lx_0.6Ly_0.6/N_104num_sim_125cL_0.2iter_845000.txt};
+\addlegendentry{$N$=104, 125 runs.}
+		\addplot[mark=none, color= blue]
+	table{../gL_log/N_64/dt_0.01/Lx_0.6Ly_0.6/N_64num_sim_750cL_0.2iter_320000.txt};
+\addlegendentry{$N$=64, 750 runs.}
+		\addplot[mark=none, color= orange]
+	table{../gL_log/N_128/dt_0.01/Lx_0.6Ly_0.6/N_128num_sim_170cL_0.2iter_1280000.txt};
+\addlegendentry{$N$=128, 170 runs.}
+		\addplot[mark=none, color= gray]
+	table{../gL_log/N_72/dt_0.01/Lx_0.6Ly_0.6/N_72num_sim_160cL_0.2iter_405000.txt};
+\addlegendentry{$N$=72, 160 runs.}
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $\lambda_x$= 0.8, $\lambda_y$=0.8, $c_L$=0.2.},
+		xlabel=$\log(t)/L^2\log t)$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+		\addplot[mark=none, color= red]
+	table{../gL_log/N_40/dt_0.01/Lx_0.8Ly_0.8/N_40num_sim_300cL_0.2iter_125000.txt};
+\addlegendentry{$N$=40, 300 runs.}
+		\addplot[mark=none, color= green]
+	table{../gL_log/N_48/dt_0.01/Lx_0.8Ly_0.8/N_48num_sim_300cL_0.2iter_180000.txt};
+\addlegendentry{$N$=48, 300 runs.}
+		\addplot[mark=none, color= black]
+	table{../gL_log/N_104/dt_0.01/Lx_0.8Ly_0.8/N_104num_sim_125cL_0.2iter_845000.txt};
+\addlegendentry{$N$=104, 125 runs.}
+		\addplot[mark=none, color= blue]
+	table{../gL_log/N_64/dt_0.01/Lx_0.8Ly_0.8/N_64num_sim_350cL_0.2iter_320000.txt};
+\addlegendentry{$N$=64, 350 runs.}
+		\addplot[mark=none, color= orange]
+	table{../gL_log/N_128/dt_0.01/Lx_0.8Ly_0.8/N_128num_sim_140cL_0.2iter_1280000.txt};
+\addlegendentry{$N$=128, 140 runs.}
+		\addplot[mark=none, color= gray]
+	table{../gL_log/N_72/dt_0.01/Lx_0.8Ly_0.8/N_72num_sim_200cL_0.2iter_405000.txt};
+\addlegendentry{$N$=72, 200 runs.}
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $\lambda_x$= 0.8, $\lambda_y$=-0.8, $c_L$=0.2.},
+		xlabel=$\log(t)/L^2\log t)$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+		\addplot[mark=none, color= red]
+	table{../gL_log/N_40/dt_0.01/Lx_0.8Ly_-0.8/N_40num_sim_300cL_0.2iter_125000.txt};
+\addlegendentry{$N$=40, 300 runs.}
+		\addplot[mark=none, color= green]
+	table{../gL_log/N_48/dt_0.01/Lx_0.8Ly_-0.8/N_48num_sim_300cL_0.2iter_180000.txt};
+\addlegendentry{$N$=48, 300 runs.}
+		\addplot[mark=none, color= blue]
+	table{../gL_log/N_64/dt_0.01/Lx_0.8Ly_-0.8/N_64num_sim_400cL_0.2iter_320000.txt};
+\addlegendentry{$N$=64, 400 runs.}
+		\addplot[mark=none, color= orange]
+	table{../gL_log/N_128/dt_0.01/Lx_0.8Ly_-0.8/N_128num_sim_130cL_0.2iter_1280000.txt};
+\addlegendentry{$N$=128, 130 runs.}
+		\addplot[mark=none, color= gray]
+	table{../gL_log/N_72/dt_0.01/Lx_0.8Ly_-0.8/N_72num_sim_240cL_0.2iter_405000.txt};
+\addlegendentry{$N$=72, 240 runs.}
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $\lambda_x$= 1, $\lambda_y$=1, $c_L$=0.2.},
+		xlabel=$\log(t)/L^2\log t)$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+		\addplot[mark=none, color= green]
+	table{../gL_log/N_48/dt_0.01/Lx_1Ly_1/N_48num_sim_300cL_0.2iter_180000.txt};
+\addlegendentry{$N$=48, 300 runs.}
+		\addplot[mark=none, color= black]
+	table{../gL_log/N_104/dt_0.01/Lx_1Ly_1/N_104num_sim_125cL_0.2iter_845000.txt};
+\addlegendentry{$N$=104, 125 runs.}
+		\addplot[mark=none, color= blue]
+	table{../gL_log/N_64/dt_0.01/Lx_1Ly_1/N_64num_sim_300cL_0.2iter_320000.txt};
+\addlegendentry{$N$=64, 300 runs.}
+		\addplot[mark=none, color= orange]
+	table{../gL_log/N_128/dt_0.01/Lx_1Ly_1/N_128num_sim_160cL_0.2iter_1280000.txt};
+\addlegendentry{$N$=128, 160 runs.}
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $\lambda_x$= 1, $\lambda_y$=-1, $c_L$=0.2.},
+		xlabel=$\log(t)/L^2\log t)$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+		\addplot[mark=none, color= green]
+	table{../gL_log/N_48/dt_0.01/Lx_1Ly_-1/N_48num_sim_300cL_0.2iter_180000.txt};
+\addlegendentry{$N$=48, 300 runs.}
+		\addplot[mark=none, color= black]
+	table{../gL_log/N_104/dt_0.01/Lx_1Ly_-1/N_104num_sim_125cL_0.2iter_845000.txt};
+\addlegendentry{$N$=104, 125 runs.}
+		\addplot[mark=none, color= blue]
+	table{../gL_log/N_64/dt_0.01/Lx_1Ly_-1/N_64num_sim_300cL_0.2iter_320000.txt};
+\addlegendentry{$N$=64, 300 runs.}
+		\addplot[mark=none, color= orange]
+	table{../gL_log/N_128/dt_0.01/Lx_1Ly_-1/N_128num_sim_130cL_0.2iter_1280000.txt};
+\addlegendentry{$N$=128, 130 runs.}
+		\addplot[mark=none, color= gray]
+	table{../gL_log/N_72/dt_0.01/Lx_1Ly_-1/N_72num_sim_200cL_0.2iter_405000.txt};
+\addlegendentry{$N$=72, 200 runs.}
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\end{document}

@@ -13,8 +13,8 @@ counter=0
 
 lam = [[0,0],[0.2,0.2],[0.2,-0.2],[0.4,0.4],[0.4,-0.4],[0.6,-0.6],[0.6,0.6],[0.8,0.8],[0.8,-0.8],[1,1],[1,-1]]
 
-colours = {40: 'red', 64: 'blue', 48: 'green', 128: 'orange'}
-sizes = [40,48, 64, 128]
+colours = {40: 'red', 64: 'blue', 48: 'green', 128: 'orange', 72: 'gray', 104: 'black'}
+sizes = [40,48, 64, 128, 72, 104]
 dic = dict() 
 for path_file in matches:
     result = re.findall(r"-?\d+\.\d+|-?\d+", path_file)

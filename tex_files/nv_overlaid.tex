@@ -1,0 +1,19 @@
+\documentclass[12pt]{article}
+\usepackage{tikz}
+\usepackage{pgfplots}
+%\pgfplotsset{compat=1.13}
+%\maxdeadcycles=200
+\begin{document}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Vortices  for  N = $40$.},
+		xlabel=$t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+		\addplot[mark=none, color= orange]
+	table{../nv_log/N_40/dt_0.01/Lx_0.6Ly_0.6/N_40num_sim_300cL_0.2iter_125000exp_-0.843965904774.txt};
