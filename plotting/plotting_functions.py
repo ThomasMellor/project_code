@@ -19,11 +19,19 @@ def write_file(file_name, data):
 def append_file(file_name, data):
     with open(file_name, 'a+') as doc:
         for l in data:
-            print l 
-            doc.write(str(l[0]))                                                                             
-            doc.write(' ')                                                                                   
-            doc.write(str(l[1]))                                                                             
-            doc.write('\n')
+            for i in range(len(l)):
+	        doc.write(str(l[i]))                                                                             
+                doc.write(' ')
+	    doc.write('\n')                                                                                   
+			
+def error_graph(mag2_graph, mag4_graph, N) :
+    error_graph = []
+    for i in range(len(mag2_graph)) :
+	error_mag = mag4_graph[i][1]-pow(mag2_graph[i][1],2)
+	err = math.sqrt(float(4)/(N-1)*error_mag*(mag4_graph[i][1]/pow(mag2_graph[i][1],4)  + pow(mag4_graph[i][1],2)/pow(mag2_graph[i][1],6)-2*mag4_graph[i][1]/pow(mag2_graph[i][1],4)))
+	error_graph.append([mag2_graph[i][0], err])
+    return error_graph 	
+
 
 def normalise(f1, f2, graph):
     for point in graph:

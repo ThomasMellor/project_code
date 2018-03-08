@@ -9,11 +9,225 @@
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
 		title={Vortices  for  N = $40$.},
-		xlabel=$t$,
-		ylabel={Binder cumulant},
+		xlabel={$\log (t/ \log t)$},
+		ylabel={$\log n_v$},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
+		\addplot[mark=none, color= green]
+	table{../nv_log/N_40/dt_0.01/Lx_0.4Ly_0.4/N_40num_sim_300cL_0.2iter_125000exp_-0.928.txt};
+\addlegendentry{$N$=40, $\lambda_x = $0.4, exp =-0.928, runs = 300 }
+		\addplot[mark=none, color= red]
+	table{../nv_log/N_40/dt_0.01/Lx_0Ly_0/N_40num_sim_1100cL_0.2iter_125000exp_-1.056.txt};
+\addlegendentry{$N$=40, $\lambda_x = $0, exp =-1.056, runs = 1100 }
 		\addplot[mark=none, color= orange]
-	table{../nv_log/N_40/dt_0.01/Lx_0.6Ly_0.6/N_40num_sim_300cL_0.2iter_125000exp_-0.843965904774.txt};
+	table{../nv_log/N_40/dt_0.01/Lx_0.6Ly_0.6/N_40num_sim_300cL_0.2iter_125000exp_-0.844.txt};
+\addlegendentry{$N$=40, $\lambda_x = $0.6, exp =-0.844, runs = 300 }
+		\addplot[mark=none, color= gray]
+	table{../nv_log/N_40/dt_0.01/Lx_0.8Ly_0.8/N_40num_sim_300cL_0.2iter_125000exp_-0.816.txt};
+\addlegendentry{$N$=40, $\lambda_x = $0.8, exp =-0.816, runs = 300 }
+		\addplot[mark=none, color= blue]
+	table{../nv_log/N_40/dt_0.01/Lx_0.2Ly_0.2/N_40num_sim_300cL_0.2iter_125000exp_-1.016.txt};
+\addlegendentry{$N$=40, $\lambda_x = $0.2, exp =-1.016, runs = 300 }
+		\addplot[mark=none, color= black]
+	table{../nv_log/N_40/dt_0.01/Lx_1Ly_1/N_40num_sim_300cL_0.2iter_125000exp_-0.811.txt};
+\addlegendentry{$N$=40, $\lambda_x = $1, exp =-0.811, runs = 300 }
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Vortices  for  N = $48$.},
+		xlabel={$\log (t/ \log t)$},
+		ylabel={$\log n_v$},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+		\addplot[mark=none, color= green]
+	table{../nv_log/N_48/dt_0.01/Lx_0.4Ly_0.4/N_48num_sim_600cL_0.2iter_180000exp_-0.921.txt};
+\addlegendentry{$N$=48, $\lambda_x = $0.4, exp =-0.921, runs = 600 }
+		\addplot[mark=none, color= red]
+	table{../nv_log/N_48/dt_0.01/Lx_0Ly_0/N_48num_sim_1300cL_0.2iter_180000exp_-1.039.txt};
+\addlegendentry{$N$=48, $\lambda_x = $0, exp =-1.039, runs = 1300 }
+		\addplot[mark=none, color= orange]
+	table{../nv_log/N_48/dt_0.01/Lx_0.6Ly_0.6/N_48num_sim_300cL_0.2iter_180000exp_-0.815.txt};
+\addlegendentry{$N$=48, $\lambda_x = $0.6, exp =-0.815, runs = 300 }
+		\addplot[mark=none, color= gray]
+	table{../nv_log/N_48/dt_0.01/Lx_0.8Ly_0.8/N_48num_sim_300cL_0.2iter_180000exp_-0.786.txt};
+\addlegendentry{$N$=48, $\lambda_x = $0.8, exp =-0.786, runs = 300 }
+		\addplot[mark=none, color= blue]
+	table{../nv_log/N_48/dt_0.01/Lx_0.2Ly_0.2/N_48num_sim_500cL_0.2iter_180000exp_-1.015.txt};
+\addlegendentry{$N$=48, $\lambda_x = $0.2, exp =-1.015, runs = 500 }
+		\addplot[mark=none, color= black]
+	table{../nv_log/N_48/dt_0.01/Lx_1Ly_1/N_48num_sim_300cL_0.2iter_180000exp_-0.748.txt};
+\addlegendentry{$N$=48, $\lambda_x = $1, exp =-0.748, runs = 300 }
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Vortices  for  N = $64$.},
+		xlabel={$\log (t/ \log t)$},
+		ylabel={$\log n_v$},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+		\addplot[mark=none, color= green]
+	table{../nv_log/N_64/dt_0.01/Lx_0.4Ly_0.4/N_64num_sim_1500cL_0.2iter_320000exp_-0.901.txt};
+\addlegendentry{$N$=64, $\lambda_x = $0.4, exp =-0.901, runs = 1500 }
+		\addplot[mark=none, color= red]
+	table{../nv_log/N_64/dt_0.01/Lx_0Ly_0/N_64num_sim_800cL_0.2iter_320000exp_-1.001.txt};
+\addlegendentry{$N$=64, $\lambda_x = $0, exp =-1.001, runs = 800 }
+		\addplot[mark=none, color= orange]
+	table{../nv_log/N_64/dt_0.01/Lx_0.6Ly_0.6/N_64num_sim_750cL_0.2iter_320000exp_-0.816.txt};
+\addlegendentry{$N$=64, $\lambda_x = $0.6, exp =-0.816, runs = 750 }
+		\addplot[mark=none, color= gray]
+	table{../nv_log/N_64/dt_0.01/Lx_0.8Ly_0.8/N_64num_sim_350cL_0.2iter_320000exp_-0.75.txt};
+\addlegendentry{$N$=64, $\lambda_x = $0.8, exp =-0.75, runs = 350 }
+		\addplot[mark=none, color= blue]
+	table{../nv_log/N_64/dt_0.01/Lx_0.2Ly_0.2/N_64num_sim_500cL_0.2iter_320000exp_-1.011.txt};
+\addlegendentry{$N$=64, $\lambda_x = $0.2, exp =-1.011, runs = 500 }
+		\addplot[mark=none, color= black]
+	table{../nv_log/N_64/dt_0.01/Lx_1Ly_1/N_64num_sim_300cL_0.2iter_320000exp_-0.758.txt};
+\addlegendentry{$N$=64, $\lambda_x = $1, exp =-0.758, runs = 300 }
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Vortices  for  N = $128$.},
+		xlabel={$\log (t/ \log t)$},
+		ylabel={$\log n_v$},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+		\addplot[mark=none, color= green]
+	table{../nv_log/N_128/dt_0.01/Lx_0.4Ly_0.4/N_128num_sim_300cL_0.2iter_1280000exp_-0.807.txt};
+\addlegendentry{$N$=128, $\lambda_x = $0.4, exp =-0.807, runs = 300 }
+		\addplot[mark=none, color= red]
+	table{../nv_log/N_128/dt_0.01/Lx_0Ly_0/N_128num_sim_450cL_0.2iter_1280000exp_-0.995.txt};
+\addlegendentry{$N$=128, $\lambda_x = $0, exp =-0.995, runs = 450 }
+		\addplot[mark=none, color= orange]
+	table{../nv_log/N_128/dt_0.01/Lx_0.6Ly_0.6/N_128num_sim_170cL_0.2iter_1280000exp_-0.563.txt};
+\addlegendentry{$N$=128, $\lambda_x = $0.6, exp =-0.563, runs = 170 }
+		\addplot[mark=none, color= gray]
+	table{../nv_log/N_128/dt_0.01/Lx_0.8Ly_0.8/N_128num_sim_140cL_0.2iter_1280000exp_-0.509.txt};
+\addlegendentry{$N$=128, $\lambda_x = $0.8, exp =-0.509, runs = 140 }
+		\addplot[mark=none, color= blue]
+	table{../nv_log/N_128/dt_0.01/Lx_0.2Ly_0.2/N_128num_sim_375cL_0.2iter_1280000exp_-0.92.txt};
+\addlegendentry{$N$=128, $\lambda_x = $0.2, exp =-0.92, runs = 375 }
+		\addplot[mark=none, color= black]
+	table{../nv_log/N_128/dt_0.01/Lx_1Ly_1/N_128num_sim_160cL_0.2iter_1280000exp_-0.524.txt};
+\addlegendentry{$N$=128, $\lambda_x = $1, exp =-0.524, runs = 160 }
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Vortices  for  N = $104$.},
+		xlabel={$\log (t/ \log t)$},
+		ylabel={$\log n_v$},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+		\addplot[mark=none, color= green]
+	table{../nv_log/N_104/dt_0.01/Lx_0.4Ly_0.4/N_104num_sim_125cL_0.2iter_845000exp_-0.758.txt};
+\addlegendentry{$N$=104, $\lambda_x = $0.4, exp =-0.758, runs = 125 }
+		\addplot[mark=none, color= red]
+	table{../nv_log/N_104/dt_0.01/Lx_0Ly_0/N_104num_sim_625cL_0.2iter_845000exp_-0.957.txt};
+\addlegendentry{$N$=104, $\lambda_x = $0, exp =-0.957, runs = 625 }
+		\addplot[mark=none, color= orange]
+	table{../nv_log/N_104/dt_0.01/Lx_0.6Ly_0.6/N_104num_sim_125cL_0.2iter_845000exp_-0.531.txt};
+\addlegendentry{$N$=104, $\lambda_x = $0.6, exp =-0.531, runs = 125 }
+		\addplot[mark=none, color= gray]
+	table{../nv_log/N_104/dt_0.01/Lx_0.8Ly_0.8/N_104num_sim_125cL_0.2iter_845000exp_-0.543.txt};
+\addlegendentry{$N$=104, $\lambda_x = $0.8, exp =-0.543, runs = 125 }
+		\addplot[mark=none, color= blue]
+	table{../nv_log/N_104/dt_0.01/Lx_0.2Ly_0.2/N_104num_sim_125cL_0.2iter_845000exp_-0.923.txt};
+\addlegendentry{$N$=104, $\lambda_x = $0.2, exp =-0.923, runs = 125 }
+		\addplot[mark=none, color= black]
+	table{../nv_log/N_104/dt_0.01/Lx_1Ly_1/N_104num_sim_125cL_0.2iter_845000exp_-0.547.txt};
+\addlegendentry{$N$=104, $\lambda_x = $1, exp =-0.547, runs = 125 }
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Vortices  for  N = $72$.},
+		xlabel={$\log (t/ \log t)$},
+		ylabel={$\log n_v$},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+		\addplot[mark=none, color= green]
+	table{../nv_log/N_72/dt_0.01/Lx_0.4Ly_0.4/N_72num_sim_200cL_0.2iter_405000exp_-0.885.txt};
+\addlegendentry{$N$=72, $\lambda_x = $0.4, exp =-0.885, runs = 200 }
+		\addplot[mark=none, color= red]
+	table{../nv_log/N_72/dt_0.01/Lx_0Ly_0/N_72num_sim_800cL_0.2iter_405000exp_-1.006.txt};
+\addlegendentry{$N$=72, $\lambda_x = $0, exp =-1.006, runs = 800 }
+		\addplot[mark=none, color= orange]
+	table{../nv_log/N_72/dt_0.01/Lx_0.6Ly_0.6/N_72num_sim_160cL_0.2iter_405000exp_-0.71.txt};
+\addlegendentry{$N$=72, $\lambda_x = $0.6, exp =-0.71, runs = 160 }
+		\addplot[mark=none, color= gray]
+	table{../nv_log/N_72/dt_0.01/Lx_0.8Ly_0.8/N_72num_sim_200cL_0.2iter_405000exp_-0.774.txt};
+\addlegendentry{$N$=72, $\lambda_x = $0.8, exp =-0.774, runs = 200 }
+		\addplot[mark=none, color= blue]
+	table{../nv_log/N_72/dt_0.01/Lx_0.2Ly_0.2/N_72num_sim_260cL_0.2iter_405000exp_-0.968.txt};
+\addlegendentry{$N$=72, $\lambda_x = $0.2, exp =-0.968, runs = 260 }
+		\addplot[mark=none, color= black]
+	table{../nv_log/N_72/dt_0.01/Lx_1Ly_1/N_72num_sim_200cL_0.2iter_405000exp_-0.727.txt};
+\addlegendentry{$N$=72, $\lambda_x = $1, exp =-0.727, runs = 200 }
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Vortices  for  N = $80$.},
+		xlabel={$\log (t/ \log t)$},
+		ylabel={$\log n_v$},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+		\addplot[mark=none, color= green]
+	table{../nv_log/N_80/dt_0.01/Lx_0.4Ly_0.4/N_80num_sim_200cL_0.2iter_500000exp_-0.918.txt};
+\addlegendentry{$N$=80, $\lambda_x = $0.4, exp =-0.918, runs = 200 }
+		\addplot[mark=none, color= red]
+	table{../nv_log/N_80/dt_0.01/Lx_0Ly_0/N_80num_sim_550cL_0.2iter_500000exp_-1.033.txt};
+\addlegendentry{$N$=80, $\lambda_x = $0, exp =-1.033, runs = 550 }
+		\addplot[mark=none, color= orange]
+	table{../nv_log/N_80/dt_0.01/Lx_0.6Ly_0.6/N_80num_sim_200cL_0.2iter_500000exp_-0.822.txt};
+\addlegendentry{$N$=80, $\lambda_x = $0.6, exp =-0.822, runs = 200 }
+		\addplot[mark=none, color= gray]
+	table{../nv_log/N_80/dt_0.01/Lx_0.8Ly_0.8/N_80num_sim_200cL_0.2iter_500000exp_-0.758.txt};
+\addlegendentry{$N$=80, $\lambda_x = $0.8, exp =-0.758, runs = 200 }
+		\addplot[mark=none, color= blue]
+	table{../nv_log/N_80/dt_0.01/Lx_0.2Ly_0.2/N_80num_sim_280cL_0.2iter_500000exp_-1.024.txt};
+\addlegendentry{$N$=80, $\lambda_x = $0.2, exp =-1.024, runs = 280 }
+		\addplot[mark=none, color= black]
+	table{../nv_log/N_80/dt_0.01/Lx_1Ly_1/N_80num_sim_200cL_0.2iter_500000exp_-0.763.txt};
+\addlegendentry{$N$=80, $\lambda_x = $1, exp =-0.763, runs = 200 }
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\end{document}

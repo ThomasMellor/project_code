@@ -8,15 +8,15 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=80, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2, 180 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=48, $\lambda_x$= 1, $\lambda_y$=-1, $c_L$=0.2, 300 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_80/dt_0.01/Lx_0.2Ly_0.2/N_80num_sim_180cL_0.2iter_500000.txt};
+	table{../gL_log/N_48/dt_0.01/Lx_1Ly_-1/N_48num_sim_300cL_0.2iter_180000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -24,64 +24,15 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=80, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 120 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=48, $\lambda_x$= 0.6, $\lambda_y$=-0.6, $c_L$=0.2, 300 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_80/dt_0.01/Lx_0Ly_0/N_80num_sim_120cL_0.2iter_500000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\clearpage
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=16, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 4000 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_16/dt_0.01/Lx_0Ly_0/N_16num_sim_4000cL_0.2iter_20000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=16, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.1, 1000 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_16/dt_0.01/Lx_0Ly_0/N_16num_sim_1000cL_0.1iter_20000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=16, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0, 100 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_16/dt_0.01/Lx_0Ly_0/N_16num_sim_100cL_0iter_20000.txt};
+	table{../gL_log/N_48/dt_0.01/Lx_0.6Ly_-0.6/N_48num_sim_300cL_0.2iter_180000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -90,15 +41,15 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=32, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 700 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=48, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2, 600 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_32/dt_0.01/Lx_0Ly_0/N_32num_sim_700cL_0.2iter_80000.txt};
+	table{../gL_log/N_48/dt_0.01/Lx_0.4Ly_0.4/N_48num_sim_600cL_0.2iter_180000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -106,15 +57,15 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=32, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.1, 100 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=48, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 1300 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_32/dt_0.01/Lx_0Ly_0/N_32num_sim_100cL_0.1iter_80000.txt};
+	table{../gL_log/N_48/dt_0.01/Lx_0Ly_0/N_48num_sim_1300cL_0.2iter_180000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -122,64 +73,15 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=32, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.4, 500 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=48, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.4, 600 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_32/dt_0.01/Lx_0Ly_0/N_32num_sim_500cL_0.4iter_80000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\clearpage
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=40, $\lambda_x$= 0.6, $\lambda_y$=0.6, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_40/dt_0.01/Lx_0.6Ly_0.6/N_40num_sim_300cL_0.2iter_125000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=40, $\lambda_x$= 0.8, $\lambda_y$=-0.8, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_40/dt_0.01/Lx_0.8Ly_-0.8/N_40num_sim_300cL_0.2iter_125000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=40, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_40/dt_0.01/Lx_0.4Ly_-0.4/N_40num_sim_300cL_0.2iter_125000.txt};
+	table{../gL_log/N_48/dt_0.01/Lx_0Ly_0/N_48num_sim_600cL_0.4iter_180000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -188,162 +90,15 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=40, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=48, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.1, 300 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_40/dt_0.01/Lx_0.4Ly_0.4/N_40num_sim_300cL_0.2iter_125000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=40, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_40/dt_0.01/Lx_0.2Ly_0.2/N_40num_sim_300cL_0.2iter_125000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=40, $\lambda_x$= 0.6, $\lambda_y$=-0.6, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_40/dt_0.01/Lx_0.6Ly_-0.6/N_40num_sim_300cL_0.2iter_125000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\clearpage
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=40, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 800 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_40/dt_0.01/Lx_0Ly_0/N_40num_sim_800cL_0.2iter_125000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=40, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.1, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_40/dt_0.01/Lx_0Ly_0/N_40num_sim_300cL_0.1iter_125000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=40, $\lambda_x$= 0.2, $\lambda_y$=-0.2, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_40/dt_0.01/Lx_0.2Ly_-0.2/N_40num_sim_300cL_0.2iter_125000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\clearpage
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=40, $\lambda_x$= 0.8, $\lambda_y$=0.8, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_40/dt_0.01/Lx_0.8Ly_0.8/N_40num_sim_300cL_0.2iter_125000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=24, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2, 1000 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_24/dt_0.01/Lx_0.2Ly_0.2/N_24num_sim_1000cL_0.2iter_45000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=24, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.1, 700 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_24/dt_0.01/Lx_0Ly_0/N_24num_sim_700cL_0.1iter_45000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\clearpage
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=24, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 1000 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_24/dt_0.01/Lx_0Ly_0/N_24num_sim_1000cL_0.2iter_45000.txt};
+	table{../gL_log/N_48/dt_0.01/Lx_0Ly_0/N_48num_sim_300cL_0.1iter_180000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -352,7 +107,7 @@
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
 		title={Binder cumulant for $N$=48, $\lambda_x$= 0.6, $\lambda_y$=0.6, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
@@ -367,162 +122,15 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=48, $\lambda_x$= 1, $\lambda_y$=-1, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=48, $\lambda_x$= 0.2, $\lambda_y$=-0.2, $c_L$=0.2, 400 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_48/dt_0.01/Lx_1Ly_-1/N_48num_sim_300cL_0.2iter_180000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\clearpage
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=48, $\lambda_x$= 0.8, $\lambda_y$=-0.8, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_48/dt_0.01/Lx_0.8Ly_-0.8/N_48num_sim_300cL_0.2iter_180000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=48, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_48/dt_0.01/Lx_0.4Ly_-0.4/N_48num_sim_300cL_0.2iter_180000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=48, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2, 600 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_48/dt_0.01/Lx_0.4Ly_0.4/N_48num_sim_600cL_0.2iter_180000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\clearpage
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=48, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2, 500 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_48/dt_0.01/Lx_0.2Ly_0.2/N_48num_sim_500cL_0.2iter_180000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=48, $\lambda_x$= 0.6, $\lambda_y$=-0.6, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_48/dt_0.01/Lx_0.6Ly_-0.6/N_48num_sim_300cL_0.2iter_180000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=48, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.1, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_48/dt_0.01/Lx_0Ly_0/N_48num_sim_300cL_0.1iter_180000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\clearpage
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=48, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.4, 600 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_48/dt_0.01/Lx_0Ly_0/N_48num_sim_600cL_0.4iter_180000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=48, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 1100 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_48/dt_0.01/Lx_0Ly_0/N_48num_sim_1100cL_0.2iter_180000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=48, $\lambda_x$= 0.2, $\lambda_y$=-0.2, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_48/dt_0.01/Lx_0.2Ly_-0.2/N_48num_sim_300cL_0.2iter_180000.txt};
+	table{../gL_log/N_48/dt_0.01/Lx_0.2Ly_-0.2/N_48num_sim_400cL_0.2iter_180000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -532,7 +140,7 @@
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
 		title={Binder cumulant for $N$=48, $\lambda_x$= 0.8, $\lambda_y$=0.8, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
@@ -547,8 +155,24 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=48, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2, 500 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_48/dt_0.01/Lx_0.2Ly_0.2/N_48num_sim_500cL_0.2iter_180000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
 		title={Binder cumulant for $N$=48, $\lambda_x$= 1, $\lambda_y$=1, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
@@ -559,19 +183,52 @@
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
+\clearpage
 \begin{figure}[htbp!]
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=104, $\lambda_x$= 0.6, $\lambda_y$=0.6, $c_L$=0.2, 125 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=48, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2, 300 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_104/dt_0.01/Lx_0.6Ly_0.6/N_104num_sim_125cL_0.2iter_845000.txt};
+	table{../gL_log/N_48/dt_0.01/Lx_0.4Ly_-0.4/N_48num_sim_300cL_0.2iter_180000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=48, $\lambda_x$= 0.8, $\lambda_y$=-0.8, $c_L$=0.2, 400 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_48/dt_0.01/Lx_0.8Ly_-0.8/N_48num_sim_400cL_0.2iter_180000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=40, $\lambda_x$= 1, $\lambda_y$=-1, $c_L$=0.2, 300 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_40/dt_0.01/Lx_1Ly_-1/N_40num_sim_300cL_0.2iter_125000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -580,15 +237,15 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=104, $\lambda_x$= 1, $\lambda_y$=-1, $c_L$=0.2, 125 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=40, $\lambda_x$= 0.6, $\lambda_y$=-0.6, $c_L$=0.2, 800 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_104/dt_0.01/Lx_1Ly_-1/N_104num_sim_125cL_0.2iter_845000.txt};
+	table{../gL_log/N_40/dt_0.01/Lx_0.6Ly_-0.6/N_40num_sim_800cL_0.2iter_125000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -596,15 +253,195 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=104, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2, 125 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=40, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2, 300 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_104/dt_0.01/Lx_0.4Ly_-0.4/N_104num_sim_125cL_0.2iter_845000.txt};
+	table{../gL_log/N_40/dt_0.01/Lx_0.4Ly_0.4/N_40num_sim_300cL_0.2iter_125000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=40, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 1100 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_40/dt_0.01/Lx_0Ly_0/N_40num_sim_1100cL_0.2iter_125000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=40, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.1, 300 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_40/dt_0.01/Lx_0Ly_0/N_40num_sim_300cL_0.1iter_125000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=40, $\lambda_x$= 0.6, $\lambda_y$=0.6, $c_L$=0.2, 300 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_40/dt_0.01/Lx_0.6Ly_0.6/N_40num_sim_300cL_0.2iter_125000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=40, $\lambda_x$= 0.2, $\lambda_y$=-0.2, $c_L$=0.2, 1000 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_40/dt_0.01/Lx_0.2Ly_-0.2/N_40num_sim_1000cL_0.2iter_125000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=40, $\lambda_x$= 0.8, $\lambda_y$=0.8, $c_L$=0.2, 300 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_40/dt_0.01/Lx_0.8Ly_0.8/N_40num_sim_300cL_0.2iter_125000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=40, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2, 300 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_40/dt_0.01/Lx_0.2Ly_0.2/N_40num_sim_300cL_0.2iter_125000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=40, $\lambda_x$= 1, $\lambda_y$=1, $c_L$=0.2, 300 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_40/dt_0.01/Lx_1Ly_1/N_40num_sim_300cL_0.2iter_125000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=40, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2, 800 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_40/dt_0.01/Lx_0.4Ly_-0.4/N_40num_sim_800cL_0.2iter_125000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=40, $\lambda_x$= 0.8, $\lambda_y$=-0.8, $c_L$=0.2, 800 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_40/dt_0.01/Lx_0.8Ly_-0.8/N_40num_sim_800cL_0.2iter_125000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=104, $\lambda_x$= 1, $\lambda_y$=-1, $c_L$=0.2, 250 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_104/dt_0.01/Lx_1Ly_-1/N_104num_sim_250cL_0.2iter_845000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=104, $\lambda_x$= 0.6, $\lambda_y$=-0.6, $c_L$=0.2, 250 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_104/dt_0.01/Lx_0.6Ly_-0.6/N_104num_sim_250cL_0.2iter_845000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -613,7 +450,7 @@
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
 		title={Binder cumulant for $N$=104, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2, 125 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
@@ -624,13 +461,78 @@
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=104, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 625 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_104/dt_0.01/Lx_0Ly_0/N_104num_sim_625cL_0.2iter_845000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=104, $\lambda_x$= 0.6, $\lambda_y$=0.6, $c_L$=0.2, 125 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_104/dt_0.01/Lx_0.6Ly_0.6/N_104num_sim_125cL_0.2iter_845000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=104, $\lambda_x$= 0.2, $\lambda_y$=-0.2, $c_L$=0.2, 425 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_104/dt_0.01/Lx_0.2Ly_-0.2/N_104num_sim_425cL_0.2iter_845000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=104, $\lambda_x$= 0.8, $\lambda_y$=0.8, $c_L$=0.2, 125 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_104/dt_0.01/Lx_0.8Ly_0.8/N_104num_sim_125cL_0.2iter_845000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
 \clearpage
 \begin{figure}[htbp!]
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
 		title={Binder cumulant for $N$=104, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2, 125 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
@@ -645,73 +547,8 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=104, $\lambda_x$= 0.6, $\lambda_y$=-0.6, $c_L$=0.2, 125 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_104/dt_0.01/Lx_0.6Ly_-0.6/N_104num_sim_125cL_0.2iter_845000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=104, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 250 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_104/dt_0.01/Lx_0Ly_0/N_104num_sim_250cL_0.2iter_845000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\clearpage
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=104, $\lambda_x$= 0.2, $\lambda_y$=-0.2, $c_L$=0.2, 250 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_104/dt_0.01/Lx_0.2Ly_-0.2/N_104num_sim_250cL_0.2iter_845000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=104, $\lambda_x$= 0.8, $\lambda_y$=0.8, $c_L$=0.2, 125 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_104/dt_0.01/Lx_0.8Ly_0.8/N_104num_sim_125cL_0.2iter_845000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
 		title={Binder cumulant for $N$=104, $\lambda_x$= 1, $\lambda_y$=1, $c_L$=0.2, 125 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
@@ -722,52 +559,19 @@
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
-\clearpage
 \begin{figure}[htbp!]
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=64, $\lambda_x$= 0.6, $\lambda_y$=0.6, $c_L$=0.2, 750 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=104, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2, 250 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_64/dt_0.01/Lx_0.6Ly_0.6/N_64num_sim_750cL_0.2iter_320000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=64, $\lambda_x$= 1, $\lambda_y$=-1, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_64/dt_0.01/Lx_1Ly_-1/N_64num_sim_300cL_0.2iter_320000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=64, $\lambda_x$= 0.8, $\lambda_y$=-0.8, $c_L$=0.2, 400 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_64/dt_0.01/Lx_0.8Ly_-0.8/N_64num_sim_400cL_0.2iter_320000.txt};
+	table{../gL_log/N_104/dt_0.01/Lx_0.4Ly_-0.4/N_104num_sim_250cL_0.2iter_845000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -776,24 +580,57 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=64, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2, 450 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=104, $\lambda_x$= 0.8, $\lambda_y$=-0.8, $c_L$=0.2, 125 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_64/dt_0.01/Lx_0.4Ly_-0.4/N_64num_sim_450cL_0.2iter_320000.txt};
+	table{../gL_log/N_104/dt_0.01/Lx_0.8Ly_-0.8/N_104num_sim_125cL_0.2iter_845000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=64, $\lambda_x$= 1, $\lambda_y$=-1, $c_L$=0.2, 450 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_64/dt_0.01/Lx_1Ly_-1/N_64num_sim_450cL_0.2iter_320000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=64, $\lambda_x$= 0.6, $\lambda_y$=-0.6, $c_L$=0.2, 400 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_64/dt_0.01/Lx_0.6Ly_-0.6/N_64num_sim_400cL_0.2iter_320000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
 \begin{figure}[htbp!]
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
 		title={Binder cumulant for $N$=64, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2, 1500 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
@@ -808,74 +645,24 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=64, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.4, 150 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=64, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 800 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_64/dt_0.01/Lx_0.2Ly_0.2/N_64num_sim_150cL_0.4iter_320000.txt};
+	table{../gL_log/N_64/dt_0.01/Lx_0Ly_0/N_64num_sim_800cL_0.2iter_320000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
-\clearpage
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=64, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2, 500 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_64/dt_0.01/Lx_0.2Ly_0.2/N_64num_sim_500cL_0.2iter_320000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=64, $\lambda_x$= 0.6, $\lambda_y$=-0.6, $c_L$=0.2, 400 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_64/dt_0.01/Lx_0.6Ly_-0.6/N_64num_sim_400cL_0.2iter_320000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=64, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 700 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_64/dt_0.01/Lx_0Ly_0/N_64num_sim_700cL_0.2iter_320000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\clearpage
 \begin{figure}[htbp!]
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
 		title={Binder cumulant for $N$=64, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.4, 400 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
@@ -886,12 +673,29 @@
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=64, $\lambda_x$= 0.6, $\lambda_y$=0.6, $c_L$=0.2, 750 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_64/dt_0.01/Lx_0.6Ly_0.6/N_64num_sim_750cL_0.2iter_320000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
 \begin{figure}[htbp!]
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
 		title={Binder cumulant for $N$=64, $\lambda_x$= 0.2, $\lambda_y$=-0.2, $c_L$=0.2, 500 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
@@ -907,7 +711,7 @@
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
 		title={Binder cumulant for $N$=64, $\lambda_x$= 0.8, $\lambda_y$=0.8, $c_L$=0.2, 350 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
@@ -923,8 +727,40 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=64, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2, 500 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_64/dt_0.01/Lx_0.2Ly_0.2/N_64num_sim_500cL_0.2iter_320000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=64, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.4, 150 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_64/dt_0.01/Lx_0.2Ly_0.2/N_64num_sim_150cL_0.4iter_320000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
 		title={Binder cumulant for $N$=64, $\lambda_x$= 1, $\lambda_y$=1, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
@@ -935,52 +771,20 @@
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=128, $\lambda_x$= 0.6, $\lambda_y$=0.6, $c_L$=0.2, 170 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_128/dt_0.01/Lx_0.6Ly_0.6/N_128num_sim_170cL_0.2iter_1280000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=128, $\lambda_x$= 1, $\lambda_y$=-1, $c_L$=0.2, 130 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_128/dt_0.01/Lx_1Ly_-1/N_128num_sim_130cL_0.2iter_1280000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
 \clearpage
 \begin{figure}[htbp!]
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=128, $\lambda_x$= 0.8, $\lambda_y$=-0.8, $c_L$=0.2, 130 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=64, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2, 450 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_128/dt_0.01/Lx_0.8Ly_-0.8/N_128num_sim_130cL_0.2iter_1280000.txt};
+	table{../gL_log/N_64/dt_0.01/Lx_0.4Ly_-0.4/N_64num_sim_450cL_0.2iter_320000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -988,211 +792,15 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=128, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2, 190 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=64, $\lambda_x$= 0.8, $\lambda_y$=-0.8, $c_L$=0.2, 400 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_128/dt_0.01/Lx_0.4Ly_-0.4/N_128num_sim_190cL_0.2iter_1280000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=128, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.4, 100 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_128/dt_0.01/Lx_0.4Ly_0.4/N_128num_sim_100cL_0.4iter_1280000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\clearpage
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=128, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2, 300 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_128/dt_0.01/Lx_0.4Ly_0.4/N_128num_sim_300cL_0.2iter_1280000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=128, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.4, 100 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_128/dt_0.01/Lx_0.2Ly_0.2/N_128num_sim_100cL_0.4iter_1280000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=128, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2, 375 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_128/dt_0.01/Lx_0.2Ly_0.2/N_128num_sim_375cL_0.2iter_1280000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\clearpage
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=128, $\lambda_x$= 0.6, $\lambda_y$=-0.6, $c_L$=0.2, 170 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_128/dt_0.01/Lx_0.6Ly_-0.6/N_128num_sim_170cL_0.2iter_1280000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=128, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.4, 200 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_128/dt_0.01/Lx_0Ly_0/N_128num_sim_200cL_0.4iter_1280000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=128, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.1, 100 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_128/dt_0.01/Lx_0Ly_0/N_128num_sim_100cL_0.1iter_1280000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\clearpage
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=128, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 420 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_128/dt_0.01/Lx_0Ly_0/N_128num_sim_420cL_0.2iter_1280000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=128, $\lambda_x$= 0.2, $\lambda_y$=-0.2, $c_L$=0.2, 250 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_128/dt_0.01/Lx_0.2Ly_-0.2/N_128num_sim_250cL_0.2iter_1280000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=128, $\lambda_x$= 0.8, $\lambda_y$=0.8, $c_L$=0.2, 140 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_128/dt_0.01/Lx_0.8Ly_0.8/N_128num_sim_140cL_0.2iter_1280000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\clearpage
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=128, $\lambda_x$= 1, $\lambda_y$=1, $c_L$=0.2, 160 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_128/dt_0.01/Lx_1Ly_1/N_128num_sim_160cL_0.2iter_1280000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=72, $\lambda_x$= 0.6, $\lambda_y$=0.6, $c_L$=0.2, 160 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_72/dt_0.01/Lx_0.6Ly_0.6/N_72num_sim_160cL_0.2iter_405000.txt};
+	table{../gL_log/N_64/dt_0.01/Lx_0.8Ly_-0.8/N_64num_sim_400cL_0.2iter_320000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -1201,7 +809,7 @@
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
 		title={Binder cumulant for $N$=72, $\lambda_x$= 1, $\lambda_y$=-1, $c_L$=0.2, 200 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
@@ -1217,73 +825,8 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=72, $\lambda_x$= 0.8, $\lambda_y$=-0.8, $c_L$=0.2, 240 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_72/dt_0.01/Lx_0.8Ly_-0.8/N_72num_sim_240cL_0.2iter_405000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=72, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2, 200 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_72/dt_0.01/Lx_0.4Ly_-0.4/N_72num_sim_200cL_0.2iter_405000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=72, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2, 200 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_72/dt_0.01/Lx_0.4Ly_0.4/N_72num_sim_200cL_0.2iter_405000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\clearpage
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=72, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2, 200 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
-		ylabel={Binder cumulant},
-		ymajorgrids=true,
-		xmajorgrids=true,
-		grid style = dashed,
-		]
-	\addplot[mark=none,red] 
-	table{../gL_log/N_72/dt_0.01/Lx_0.2Ly_0.2/N_72num_sim_200cL_0.2iter_405000.txt};
-	\end{axis}
-\end{tikzpicture}
-\end{figure}
-\begin{figure}[htbp!]
-\centering
-	\begin{tikzpicture}
-		\begin{axis}[legend pos=outer north east,
 		title={Binder cumulant for $N$=72, $\lambda_x$= 0.6, $\lambda_y$=-0.6, $c_L$=0.2, 250 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
@@ -1298,15 +841,31 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=72, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 350 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=72, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2, 200 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_72/dt_0.01/Lx_0Ly_0/N_72num_sim_350cL_0.2iter_405000.txt};
+	table{../gL_log/N_72/dt_0.01/Lx_0.4Ly_0.4/N_72num_sim_200cL_0.2iter_405000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=72, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 800 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_72/dt_0.01/Lx_0Ly_0/N_72num_sim_800cL_0.2iter_405000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -1315,15 +874,31 @@
 \centering
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
-		title={Binder cumulant for $N$=72, $\lambda_x$= 0.2, $\lambda_y$=-0.2, $c_L$=0.2, 200 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		title={Binder cumulant for $N$=72, $\lambda_x$= 0.6, $\lambda_y$=0.6, $c_L$=0.2, 160 runs.},
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
 		grid style = dashed,
 		]
 	\addplot[mark=none,red] 
-	table{../gL_log/N_72/dt_0.01/Lx_0.2Ly_-0.2/N_72num_sim_200cL_0.2iter_405000.txt};
+	table{../gL_log/N_72/dt_0.01/Lx_0.6Ly_0.6/N_72num_sim_160cL_0.2iter_405000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=72, $\lambda_x$= 0.2, $\lambda_y$=-0.2, $c_L$=0.2, 400 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_72/dt_0.01/Lx_0.2Ly_-0.2/N_72num_sim_400cL_0.2iter_405000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}
@@ -1332,7 +907,7 @@
 	\begin{tikzpicture}
 		\begin{axis}[legend pos=outer north east,
 		title={Binder cumulant for $N$=72, $\lambda_x$= 0.8, $\lambda_y$=0.8, $c_L$=0.2, 200 runs.},
-		xlabel=$\log(t)/L^2\log t)$,
+		xlabel=$\log t/L^2\log t$,
 		ylabel={Binder cumulant},
 		ymajorgrids=true,
 		xmajorgrids=true,
@@ -1340,6 +915,627 @@
 		]
 	\addplot[mark=none,red] 
 	table{../gL_log/N_72/dt_0.01/Lx_0.8Ly_0.8/N_72num_sim_200cL_0.2iter_405000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=72, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2, 260 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_72/dt_0.01/Lx_0.2Ly_0.2/N_72num_sim_260cL_0.2iter_405000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=72, $\lambda_x$= 1, $\lambda_y$=1, $c_L$=0.2, 200 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_72/dt_0.01/Lx_1Ly_1/N_72num_sim_200cL_0.2iter_405000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=72, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2, 400 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_72/dt_0.01/Lx_0.4Ly_-0.4/N_72num_sim_400cL_0.2iter_405000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=72, $\lambda_x$= 0.8, $\lambda_y$=-0.8, $c_L$=0.2, 260 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_72/dt_0.01/Lx_0.8Ly_-0.8/N_72num_sim_260cL_0.2iter_405000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=24, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.1, 700 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_24/dt_0.01/Lx_0Ly_0/N_24num_sim_700cL_0.1iter_45000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=24, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 1000 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_24/dt_0.01/Lx_0Ly_0/N_24num_sim_1000cL_0.2iter_45000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=24, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2, 1000 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_24/dt_0.01/Lx_0.2Ly_0.2/N_24num_sim_1000cL_0.2iter_45000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=128, $\lambda_x$= 1, $\lambda_y$=-1, $c_L$=0.2, 200 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_128/dt_0.01/Lx_1Ly_-1/N_128num_sim_200cL_0.2iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=128, $\lambda_x$= 0.6, $\lambda_y$=-0.6, $c_L$=0.2, 220 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_128/dt_0.01/Lx_0.6Ly_-0.6/N_128num_sim_220cL_0.2iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=128, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.4, 100 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_128/dt_0.01/Lx_0.4Ly_0.4/N_128num_sim_100cL_0.4iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=128, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2, 300 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_128/dt_0.01/Lx_0.4Ly_0.4/N_128num_sim_300cL_0.2iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=128, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.1, 100 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_128/dt_0.01/Lx_0Ly_0/N_128num_sim_100cL_0.1iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=128, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 450 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_128/dt_0.01/Lx_0Ly_0/N_128num_sim_450cL_0.2iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=128, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.4, 200 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_128/dt_0.01/Lx_0Ly_0/N_128num_sim_200cL_0.4iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=128, $\lambda_x$= 0.6, $\lambda_y$=0.6, $c_L$=0.2, 170 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_128/dt_0.01/Lx_0.6Ly_0.6/N_128num_sim_170cL_0.2iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=128, $\lambda_x$= 0.2, $\lambda_y$=-0.2, $c_L$=0.2, 250 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_128/dt_0.01/Lx_0.2Ly_-0.2/N_128num_sim_250cL_0.2iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=128, $\lambda_x$= 0.8, $\lambda_y$=0.8, $c_L$=0.2, 140 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_128/dt_0.01/Lx_0.8Ly_0.8/N_128num_sim_140cL_0.2iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=128, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.4, 100 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_128/dt_0.01/Lx_0.2Ly_0.2/N_128num_sim_100cL_0.4iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=128, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2, 375 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_128/dt_0.01/Lx_0.2Ly_0.2/N_128num_sim_375cL_0.2iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=128, $\lambda_x$= 1, $\lambda_y$=1, $c_L$=0.2, 160 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_128/dt_0.01/Lx_1Ly_1/N_128num_sim_160cL_0.2iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=128, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2, 190 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_128/dt_0.01/Lx_0.4Ly_-0.4/N_128num_sim_190cL_0.2iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=128, $\lambda_x$= 0.8, $\lambda_y$=-0.8, $c_L$=0.2, 130 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_128/dt_0.01/Lx_0.8Ly_-0.8/N_128num_sim_130cL_0.2iter_1280000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=32, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.1, 100 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_32/dt_0.01/Lx_0Ly_0/N_32num_sim_100cL_0.1iter_80000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=32, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 700 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_32/dt_0.01/Lx_0Ly_0/N_32num_sim_700cL_0.2iter_80000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=32, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.4, 500 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_32/dt_0.01/Lx_0Ly_0/N_32num_sim_500cL_0.4iter_80000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=80, $\lambda_x$= 1, $\lambda_y$=-1, $c_L$=0.2, 200 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_80/dt_0.01/Lx_1Ly_-1/N_80num_sim_200cL_0.2iter_500000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=80, $\lambda_x$= 0.6, $\lambda_y$=-0.6, $c_L$=0.2, 200 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_80/dt_0.01/Lx_0.6Ly_-0.6/N_80num_sim_200cL_0.2iter_500000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=80, $\lambda_x$= 0.4, $\lambda_y$=0.4, $c_L$=0.2, 200 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_80/dt_0.01/Lx_0.4Ly_0.4/N_80num_sim_200cL_0.2iter_500000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=80, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 550 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_80/dt_0.01/Lx_0Ly_0/N_80num_sim_550cL_0.2iter_500000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=80, $\lambda_x$= 0.6, $\lambda_y$=0.6, $c_L$=0.2, 200 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_80/dt_0.01/Lx_0.6Ly_0.6/N_80num_sim_200cL_0.2iter_500000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=80, $\lambda_x$= 0.8, $\lambda_y$=0.8, $c_L$=0.2, 200 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_80/dt_0.01/Lx_0.8Ly_0.8/N_80num_sim_200cL_0.2iter_500000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=80, $\lambda_x$= 0.2, $\lambda_y$=0.2, $c_L$=0.2, 280 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_80/dt_0.01/Lx_0.2Ly_0.2/N_80num_sim_280cL_0.2iter_500000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=80, $\lambda_x$= 1, $\lambda_y$=1, $c_L$=0.2, 200 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_80/dt_0.01/Lx_1Ly_1/N_80num_sim_200cL_0.2iter_500000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=80, $\lambda_x$= 0.4, $\lambda_y$=-0.4, $c_L$=0.2, 200 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_80/dt_0.01/Lx_0.4Ly_-0.4/N_80num_sim_200cL_0.2iter_500000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=80, $\lambda_x$= 0.8, $\lambda_y$=-0.8, $c_L$=0.2, 200 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_80/dt_0.01/Lx_0.8Ly_-0.8/N_80num_sim_200cL_0.2iter_500000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=16, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.2, 4000 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_16/dt_0.01/Lx_0Ly_0/N_16num_sim_4000cL_0.2iter_20000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\clearpage
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=16, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0.1, 1000 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_16/dt_0.01/Lx_0Ly_0/N_16num_sim_1000cL_0.1iter_20000.txt};
+	\end{axis}
+\end{tikzpicture}
+\end{figure}
+\begin{figure}[htbp!]
+\centering
+	\begin{tikzpicture}
+		\begin{axis}[legend pos=outer north east,
+		title={Binder cumulant for $N$=16, $\lambda_x$= 0, $\lambda_y$=0, $c_L$=0, 100 runs.},
+		xlabel=$\log t/L^2\log t$,
+		ylabel={Binder cumulant},
+		ymajorgrids=true,
+		xmajorgrids=true,
+		grid style = dashed,
+		]
+	\addplot[mark=none,red] 
+	table{../gL_log/N_16/dt_0.01/Lx_0Ly_0/N_16num_sim_100cL_0iter_20000.txt};
 	\end{axis}
 \end{tikzpicture}
 \end{figure}

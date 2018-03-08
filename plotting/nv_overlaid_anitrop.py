@@ -78,7 +78,7 @@ with open('../tex_files/nv_overlaid_anistropic.tex','w') as main_file:
                         main_file.write(line) 
                     title = '\t\ttitle={Vortices  for  N = $' + N + '$.},\n' 
                     main_file.write(title)
-                    with open('../tex_files/body_t.tex', 'r') as body:
+                    with open('../tex_files/body_nv_overlaid.tex', 'r') as body:
                         for line in body:
                             main_file.write(line) 
             add_plot =  '\t\t\\addplot[mark=none, color= ' + colours[float(Lx)] +']\n'
