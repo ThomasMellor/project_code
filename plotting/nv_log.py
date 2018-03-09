@@ -76,10 +76,10 @@ def main():
         graph = PF.normalise(PF.log_div_log, math.log, graph)
         subset_graph = PF.subset_graph(linear_x[0], linear_x[1], graph)     
         times = []     
-        num_vor = []     
+        num_vor = []    
         PF.split_graph(times, num_vor, subset_graph)     
         popt, pcov = curve_fit(lin,  times, num_vor)
-        path=directory+ "/N_" + N + "num_sim_" + run + "cL_" + cL + "iter_" +itera + "exp_" + str(popt[0])+ ".txt"
+	path=directory+ "/N_" + N + "num_sim_" + run + "cL_" + cL + "iter_" +itera + "exp_" + str(round(popt[0],3))+ ".txt"
         PF.write_file(path, graph)
 
 def lin(x, a, b):

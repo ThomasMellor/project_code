@@ -38,7 +38,7 @@ with open('../tex_files/gL_run.tex','w') as main_file:
         with open('../tex_files/body_run.tex', 'r') as body:
             for line in body:
                 main_file.write(line)
-        table='\ttable{' + path_file + '};\n'
+        table='\ttable[y error index =2]{' + path_file + '};\n'
         main_file.write(table)
         with open('../tex_files/end.tex','r') as end:
             for line in end:
