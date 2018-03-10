@@ -23,8 +23,13 @@ unsigned int num_words_in_string(std::string);
 
 std::vector<std::string> list_files(std::string); // returns list of files in a directory
  
-double timestep(std::string file); // returns simulation time from file name
+double timestep(std::string path); // returns simulation time from file name
+double simulation_number(std::string path); // return simulation number from file name 
 
+double deltat(std::string path);
+int iteration(std::string path);
+
+void file_error_message(std::string path);
 bool check_dir_exists(std::string);
 
 /*
@@ -68,9 +73,15 @@ angle_lattice angle_lattice_from_path(std::string const& path);
 
 angle_lattice empty_angle_lattice_from_path(std::string const& path); // empty lattice of size in path
 
+vortex_lattice empty_vortex_lattice_from_path(std::string const& path); // empty lattice of size in path
+
 std::map<double, av_vortex_number> make_vortex_map(std::vector<std::string> const &);
 
 std::vector<std::map<double, av_magnetisation>> make_magnetisation_map(std::vector<std::string> const&, std::initializer_list<int>);
+
+std::map<double, av_magnetisation> mag_averaged(std::string const& file_1, std::string const& file_2, int power, int runs_1, int runs_2);
+
+std::map<double, av_vortex_number> vortex_averaged(std::string const& file_1, std::string const& file_2, int runs_1, int runs_2);
 
 /*
  * Writes line to line_num of lat

@@ -1,7 +1,7 @@
 #include "vortex_calculation.h"
 #include <math.h>
 /*
-vortex_lattice& make_vor_lattice(angle_lattice const& lat) {
+vortex_lattice make_vor_lattice(angle_lattice const& lat) {
         vortex_lattice vor_lat(lat.size());
         for(int i = 0; i < lat.size(); i++) {                                                                     
 		for(int j = 0; j < lat.size(); j++) {                                                                    
@@ -19,10 +19,11 @@ int circulation(angle_lattice const& lat, int i, int j) {
 	total_angle += angle_difference(lat, i+1, j+1, i+1, j);
 	total_angle += angle_difference(lat, i, j+1, i+1, j+1);
 	total_angle += angle_difference(lat, i, j, i, j+1);
-		
-	if(total_angle <= -2*M_PI) {
+
+	double residual = 1.0e-12;	
+	if(total_angle <= -2*M_PI + residual) {
 		return -1;
-	} else if(total_angle >= 2*M_PI) {
+	} else if(total_angle >= 2*M_PI - residual) {
 		return 1;
 	} else {
 		return 0;
@@ -52,15 +53,27 @@ vortex_number make_vortex_number(angle_lattice const& lat) {
 			};	
 		};
 	};
-        return vortex_number(num_vor, num_anti_vor);
+    return vortex_number(num_vor, num_anti_vor);
 };	
 
 av_vortex_number& av_vortex_number::add(vortex_number const& vor) {
-        int num = (*this).averaging_num;
-        double old_av_vor = (*this).av_vor;
-        double old_av_anti_vor = (*this).av_anti_vor;
-        (*this).av_vor = ((double) old_av_vor*num + vor.get_num_vor())/(num + 1);
-        (*this).av_anti_vor = ((double) old_av_anti_vor*num + vor.get_num_anti_vor())/(num + 1);
+        (*this).n_vor += vor.get_num_vor();
+        (*this).n_anti_vor += vor.get_num_anti_vor(); 
         (*this).averaging_num++;
         return *this;
+};
+
+double av_vortex_number::get_av_vor() const {
+	if ((*this).averaging_num == 0) {
+		return 0;
+	} else {
+		return (*this).n_vor/(*this).averaging_num;
+	};
+};
+double av_vortex_number::get_av_anti_vor() const { 
+	if ((*this).averaging_num == 0) {
+		return 0;
+	} else {
+		return (*this).n_anti_vor/(*this).averaging_num;
+	};
 };

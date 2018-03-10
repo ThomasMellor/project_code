@@ -10,10 +10,10 @@ av_magnetisation& av_magnetisation::add(magnetisation const& mag) {
 };
 
 double av_magnetisation::get_average() const {
-	if (averaging_num == 0) {
+	if ((*this).averaging_num == 0) {
 		return 0;
 	} else {
-		return total/averaging_num;
+		return (*this).total/(*this).averaging_num;
 	};
 };	
 

@@ -26,14 +26,18 @@ class vortex_number {
  */
 class av_vortex_number {
         private: 
-                double av_vor = 0;
-                double av_anti_vor = 0;
-                unsigned int averaging_num = 0; 
+                double n_vor;
+                double n_anti_vor;
+                unsigned int averaging_num; 
         public:
-                double get_av_vor() const {return av_vor;};
-                double get_av_anti_vor() const {return av_anti_vor;};
-                av_vortex_number& add(vortex_number const&); // reaverages vortex numbers
+                double get_av_vor() const;
+                double get_av_anti_vor() const;
+                av_vortex_number() : n_vor(0), n_anti_vor(0), averaging_num(0) {};
+				av_vortex_number& add(vortex_number const&); // reaverages vortex numbers
+				av_vortex_number(int av_num, double n_v, double n_av) : averaging_num(av_num), n_vor(n_v),
+				n_anti_vor(n_av) {};
 };
 
 vortex_number make_vortex_number(angle_lattice const&);
+
 #endif

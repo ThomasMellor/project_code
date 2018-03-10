@@ -24,15 +24,18 @@ class magnetisation {
  */
 class av_magnetisation {
         private:
-                double total = 0;
-                unsigned int averaging_num = 0;
+                double total;
+                unsigned int averaging_num;
                 const int power;  
         public:
-                int get_power() const {return power;}
-                av_magnetisation(int pow) : power(pow) {}; 
-                av_magnetisation& add(magnetisation const&); // reaverages with the addition on object
-                double get_average() const;
-                av_magnetisation() : power(0) {};
+			int get_power() const {return power;}
+            av_magnetisation(int pow) : power(pow) {}; 
+            av_magnetisation& add(magnetisation const&); // reaverages with the addition on object
+            double get_average() const;
+            av_magnetisation() : power(0), total(0), averaging_num(0) {};
+			double get_total() const { return total;};
+			double get_averaging_num() const {return averaging_num;};	
+			av_magnetisation(int pow, int av_num, double tot) : power(pow), averaging_num(av_num), total(tot) {};	
 };
 
 double magnitude_pow(magnetisation const&, int);
