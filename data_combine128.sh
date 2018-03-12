@@ -7,7 +7,7 @@ for i in 128
 		cL=0.2
 		iter=1280000
 		runs_1=200
-		runs_2=50
+		runs_2=100
 		first=""
 		extension="third"
 		touch "file_directories4.txt"
