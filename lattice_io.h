@@ -12,6 +12,7 @@
 #include "vortex_calculation.h"
 #include "magnetisation.h"
 #include <initializer_list>
+#include "correlation.h"
 
 /*
  * Functions related to I/O
@@ -77,6 +78,8 @@ vortex_lattice empty_vortex_lattice_from_path(std::string const& path); // empty
 
 std::map<double, av_vortex_number> make_vortex_map(std::vector<std::string> const &);
 
+std::map<int, av_correlation> make_correlation_map(std::vector<std::string> const&, double);
+
 std::vector<std::map<double, av_magnetisation>> make_magnetisation_map(std::vector<std::string> const&, std::initializer_list<int>);
 
 std::map<double, av_magnetisation> mag_averaged(std::string const& file_1, std::string const& file_2, int power, int runs_1, int runs_2);
@@ -112,5 +115,6 @@ void write_magnetisation(std::map<double, av_magnetisation> const& mag_map, std:
  */
 void write_vortex_number(std::map<double, av_vortex_number> const&, std::string const&, std::string const&);
 
+void write_correlation(std::map<int, av_correlation> const&, std::string const&, std::string const&);
 
 #endif

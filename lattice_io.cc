@@ -131,6 +131,29 @@ std::map<double, av_vortex_number> make_vortex_map(std::vector<std::string> cons
         return vor_map;
 };
 
+std::map<int, av_correlation> make_correlation_map(std::vector<std::string> const& files, double time) {
+	angle_lattice lat = empty_angle_lattice_from_path(files[0]);
+	std::map<int, av_correlation> av_cor_map;
+	bool not_in = true;
+	for(std::string const& st : files) {
+		if(time != timestep(st)) {
+			continue;
+			not_in = false;
+		};
+		lattice_read(lat, st);
+		double angle_0 = lat.point(0,0);
+		for(int i = 1; i < lat.size()/2; i++) {
+			av_cor_map[i].add(cos(angle_0 - lat.point(i,0)));
+		};	
+	};
+	if(not_in == true) {
+		std::cerr << "Timestep not part of results!" << std::endl;
+		exit(1);
+	};
+	return av_cor_map;
+};
+
+
 std::vector<std::map<double, av_magnetisation>> make_magnetisation_map(std::vector<std::string> const& files, std::initializer_list<int> pow_args) {
     angle_lattice lat = empty_angle_lattice_from_path(files[0]);
 	std::vector<std::map<double, av_magnetisation>> mag_map_list(pow_args.size());
@@ -170,6 +193,17 @@ void write_magnetisation(std::map<double, av_magnetisation> const& mag_map, std:
 		file << time << " " << mag << std::endl;		
 	};
 };
+
+void write_correlation(std::map<int, av_correlation> const& cor_map, std::string const& dir, std::string const& name) {
+	std::string path = dir + "/" + name;
+	std::ofstream file(path);
+	for(std::map<int, av_correlation>::const_iterator iter = cor_map.cbegin(); iter != cor_map.cend(); iter++){
+		int distance = (*iter).first;
+		double cor = (*iter).second.get_average();
+		file << distance << " " << cor << std::endl;		
+	};
+};
+
 
 std::map<double, av_magnetisation> mag_averaged(std::string const& path_1, std::string const& path_2, int power, int runs_1, int runs_2) {
 	std::ifstream file_1(path_1);
